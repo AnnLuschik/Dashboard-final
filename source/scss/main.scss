@@ -16,6 +16,9 @@ h1 {
     font-size: $hugeFont;
     @include baseGradientLogo;
 }
+h2 {
+    @include title;
+}
 h3 {
     @include small-title;
 }
@@ -29,8 +32,13 @@ h3 {
     display: flex;
 }
 
+section {
+    background-color: #FFFFFF;
+}
+
 /*Navigation aside
 ============================================================*/
+
 .nav-sidebar {
     display: flex;
     flex-direction: column;
@@ -69,16 +77,73 @@ header {
     display: flex;
     flex-direction: column;
     background: $sectionBcg;
-    height: 166px;
 }
 
 .nav-header {
-    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid $borderColor;
+}
+
+.nav-header__icon {
+    padding: 0 18px; 
+    border-right: 1px solid $borderColor;
+}
+
+// .nav-header__icon > img {
+    
+// }
+
+.nav-header__rectangle {
+    width: 32px;    
+    height: 16px;
+    border-radius: 20px;
+    background: linear-gradient(to left, $gradientBaseStart, $gradientBaseEnd);
+}
+
+.nav-header__search {
+    margin: 18px 187px;
+    padding: 11px 162px 11px 11px;
+    font-weight: 400;
+    font-size: $mediumFont;
+    color: $searchTextColor;
+    text-transform: capitalize;
+    background: $searchColor;
+    border: 1px solid $borderColor;
+    border-radius: 20px;
+}
+
+.nav-header__user {
+    display: flex;
+    align-items: center;
+}
+
+.nav-header-user__main {
+    padding: 0 72px 0 18px;
+}
+
+.nav-header-user__main > h4 {
+    font-weight: 700;
+    font-size: $nameFont;
+    @include baseGradientText;
+    text-transform: capitalize;
+}
+
+.nav-header-user__main > h4::first-letter {
+    text-transform: lowercase;
+}
+
+.nav-header-user__main > p {
+    font-weight: 700;
+    font-size: $smallFont;
+    color: $textColor;
 }
 
 .stactics {
     display: flex; 
-    justify-content: space-around;   
+    justify-content: space-around;  
+    align-items: center; 
 }
 
 .stactics__item {
@@ -98,7 +163,14 @@ header {
 
 .stactics-item__changes > p {
     padding: 0 7.5px;
-    @include standart-text;
+    @include changes;
+}
+
+.stactics__btn button {
+    padding: 20px 0 22px;
+    cursor: pointer;
+    @include small-title;
+    @include baseGradientText;
 }
 
 /*Main 
@@ -109,29 +181,45 @@ main {
     flex-flow: wrap row;
     justify-content: space-around;
     padding: 10px;
-    background-color: lightblue;
+    background-color: $bcg;
 }
 
 .inner {
     margin: 10px;
+    
 }
 
 .monthly-progress {
     width: 704px;
     height: 266px;
-    background-color: lightpink;
 }
 
 .hour-revenue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
     width: 264px;
-    height: 266px;
-    background-color: rebeccapurple;
+}
+
+.hour-revenue > h2 {
+    margin-bottom: 30px;
+
+}
+
+.hour-revenue__changes {
+    display: flex;
+}
+
+.hour-revenue__changes > p {
+    padding: 0 7.5px;
+    @include changes; 
 }
 
 .feed {
     width: 467px;
     height: 508px;
-    background-color: sandybrown;
 }
 
 .holder__box {
@@ -142,7 +230,6 @@ main {
 .task {
     width: 501px;
     height: 244px;
-    background-color: tomato;
 }
 
 .holder-box__final {
@@ -152,13 +239,11 @@ main {
 .progress {
     width: 241px;
     height: 244px;
-    background-color: violet;
 }
 
 .shipment {
     width: 241px;
     height: 245px;
-    background-color: steelblue;
 }
 /*Right sidebar
 ===============================================================*/

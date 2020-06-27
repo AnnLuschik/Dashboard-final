@@ -24,6 +24,12 @@
     @include baseGradientText;
 }
 
+@mixin changes {
+    font-weight: 700;
+    font-size: $mediumFont;
+    color: $textColor;
+}
+
 @mixin baseGradient {
     background: linear-gradient(to bottom, $gradientBaseStart, $gradientBaseEnd);    
 }

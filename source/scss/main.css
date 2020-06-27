@@ -4,9 +4,12 @@
 /*Заголовки секций*/
 /*Основной текст, заголовки в .stactics*/
 /*---------Colors------------*/
-* {
+*,
+*:before,
+*:after {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html, body, div, span,
@@ -22,6 +25,10 @@ time {
   vertical-align: baseline;
 }
 
+img {
+  vertical-align: middle;
+}
+
 ul {
   list-style: none;
 }
@@ -31,8 +38,36 @@ a {
   background-color: transparent;
 }
 
-button {
+a:active,
+a:hover {
+  outline: 0;
+}
+
+button,
+input {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  line-height: normal;
   background: none;
+  outline: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }
 
 .wrapper {
@@ -53,6 +88,13 @@ h1 {
   background-size: 100%;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 14px;
+  color: #777777;
+  text-transform: capitalize;
 }
 
 h3 {
@@ -79,6 +121,10 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+section {
+  background-color: #FFFFFF;
 }
 
 /*Navigation aside
@@ -143,11 +189,77 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #FFFFFF;
-  height: 166px;
 }
 
 .nav-header {
-  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.nav-header__icon {
+  padding: 0 18px;
+  border-right: 1px solid #F1F1F1;
+}
+
+.nav-header__rectangle {
+  width: 32px;
+  height: 16px;
+  border-radius: 20px;
+  background: -webkit-gradient(linear, right top, left top, from(#FC755B), to(#FD5272));
+  background: linear-gradient(to left, #FC755B, #FD5272);
+}
+
+.nav-header__search {
+  margin: 18px 187px;
+  padding: 11px 162px 11px 11px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #C8C8C8;
+  text-transform: capitalize;
+  background: #F8F8F8;
+  border: 1px solid #F1F1F1;
+  border-radius: 20px;
+}
+
+.nav-header__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-header-user__main {
+  padding: 0 72px 0 18px;
+}
+
+.nav-header-user__main > h4 {
+  font-weight: 700;
+  font-size: 13px;
+  background: -webkit-gradient(linear, left top, right top, from(#FC755B), to(#FD5272));
+  background: linear-gradient(to right, #FC755B, #FD5272);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-transform: capitalize;
+}
+
+.nav-header-user__main > h4::first-letter {
+  text-transform: lowercase;
+}
+
+.nav-header-user__main > p {
+  font-weight: 700;
+  font-size: 10px;
+  color: #BFBFBF;
 }
 
 .stactics {
@@ -156,6 +268,9 @@ header {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .stactics__item {
@@ -181,9 +296,23 @@ header {
 
 .stactics-item__changes > p {
   padding: 0 7.5px;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 12px;
   color: #BFBFBF;
+}
+
+.stactics__btn button {
+  padding: 20px 0 22px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 12px;
+  color: #777777;
+  text-transform: capitalize;
+  background: -webkit-gradient(linear, left top, right top, from(#FC755B), to(#FD5272));
+  background: linear-gradient(to right, #FC755B, #FD5272);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /*Main 
@@ -202,7 +331,7 @@ main {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding: 10px;
-  background-color: lightblue;
+  background-color: #F0F0F0;
 }
 
 .inner {
@@ -212,19 +341,46 @@ main {
 .monthly-progress {
   width: 704px;
   height: 266px;
-  background-color: lightpink;
 }
 
 .hour-revenue {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 30px 0;
   width: 264px;
-  height: 266px;
-  background-color: rebeccapurple;
+}
+
+.hour-revenue > h2 {
+  margin-bottom: 30px;
+}
+
+.hour-revenue__changes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hour-revenue__changes > p {
+  padding: 0 7.5px;
+  font-weight: 700;
+  font-size: 12px;
+  color: #BFBFBF;
 }
 
 .feed {
   width: 467px;
   height: 508px;
-  background-color: sandybrown;
 }
 
 .holder__box {
@@ -240,7 +396,6 @@ main {
 .task {
   width: 501px;
   height: 244px;
-  background-color: tomato;
 }
 
 .holder-box__final {
@@ -252,13 +407,11 @@ main {
 .progress {
   width: 241px;
   height: 244px;
-  background-color: violet;
 }
 
 .shipment {
   width: 241px;
   height: 245px;
-  background-color: steelblue;
 }
 
 /*Right sidebar
