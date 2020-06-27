@@ -1,0 +1,72 @@
+/*Main 
+=======================================================*/
+main {
+    display: flex;
+    flex: 1;
+    flex-flow: wrap row;
+    justify-content: space-around;
+    padding: 10px;
+    background-color: $bcg;
+}
+
+.inner {
+    margin: 10px;
+    
+}
+
+.monthly-progress {
+    width: 704px;
+    height: 266px;
+}
+
+.hour-revenue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    width: 264px;
+}
+
+.hour-revenue > h2 {
+    margin-bottom: 30px;
+
+}
+
+.hour-revenue__changes {
+    display: flex;
+}
+
+.hour-revenue__changes > p {
+    padding: 0 7.5px;
+    @include changes; 
+}
+
+.feed {
+    width: 467px;
+    height: 508px;
+}
+
+.holder__box {
+    display: flex;
+    flex-direction: column;
+}
+
+.task {
+    width: 501px;
+    height: 244px;
+}
+
+.holder-box__final {
+    display: flex;
+}
+
+.progress {
+    width: 241px;
+    height: 244px;
+}
+
+.shipment {
+    width: 241px;
+    height: 245px;
+}
