@@ -1,0 +1,11 @@
+@mixin title {
+    font-weight: 700;
+    font-size: $titleFont;   
+    font-family: 'Lato', sans-serif; 
+    color: $title;
+}
+
+@mixin small-title {
+    @include title;
+    font-size: $mediumFont;
+}
