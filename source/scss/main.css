@@ -87,6 +87,7 @@ h1 {
   background: linear-gradient(to bottom, #FC755B, #FD5272);
   background-size: 100%;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
@@ -248,6 +249,7 @@ header {
   background: linear-gradient(to right, #FC755B, #FD5272);
   background-size: 100%;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   text-transform: capitalize;
 }
@@ -285,6 +287,7 @@ header {
   background: linear-gradient(to right, #FC755B, #FD5272);
   background-size: 100%;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
@@ -312,6 +315,7 @@ header {
   background: linear-gradient(to right, #FC755B, #FD5272);
   background-size: 100%;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 
