@@ -1,11 +1,43 @@
 @mixin title {
     font-weight: 700;
     font-size: $titleFont;   
-    font-family: 'Lato', sans-serif; 
-    color: $colorTitle;
+    color: $titleColor;
+    text-transform: capitalize;
 }
 
 @mixin small-title {
-    @include title;
+    font-weight: 700;
     font-size: $mediumFont;
+    color: $titleColor;
+    text-transform: capitalize;
+}
+
+@mixin standart-text {
+    font-weight: 400;
+    font-size: $mediumFont;
+    color: $textColor;
+}
+
+@mixin stactics-number {
+    font-weight: 700;
+    font-size: $numberFont;
+    @include baseGradientText;
+}
+
+@mixin baseGradient {
+    background: linear-gradient(to bottom, $gradientBaseStart, $gradientBaseEnd);    
+}
+
+@mixin baseGradientText {
+    background: linear-gradient(to right, $gradientBaseStart, $gradientBaseEnd);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@mixin baseGradientLogo {
+    background: linear-gradient(to bottom, $gradientBaseStart, $gradientBaseEnd);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    color: transparent;
 }

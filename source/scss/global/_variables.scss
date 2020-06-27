@@ -1,10 +1,10 @@
 /*------Font sizes----------*/
-$hugeFont : 30px;
+$hugeFont : 30px;                       /*Логотип*/
 $big-numberFont : 25px;
 $numberFont : 20px;
-$titleFont : 14px;
+$titleFont : 14px;                         /*Заголовки секций*/
 $nameFont : 13px;
-$mediumFont : 12px;
+$mediumFont : 12px;                         /*Основной текст, заголовки в .stactics*/
 $smallFont : 10px;
 $tinyFont : 8px;
 
@@ -25,4 +25,6 @@ $searchTextColor: #C8C8C8;
 $hoverlinkColor : #C54457;
 $taskTimeColor: #9C9C9C;
 $messageTimeColor: #979796;
+
+$maxwidth: 1366px;
 

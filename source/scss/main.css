@@ -1,23 +1,74 @@
+@charset "UTF-8";
 /*------Font sizes----------*/
+/*Логотип*/
+/*Заголовки секций*/
+/*Основной текст, заголовки в .stactics*/
 /*---------Colors------------*/
 * {
-  margin: 0;
-  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-body {
+html, body, div, span,
+h1, h2, h3, h4, h5, h6, p, blockquote,
+button, a, img, ul, li, form, label, aside,
+footer, header, nav, section,
+time {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+
+button {
+  background: none;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: wrap row;
+          flex-flow: wrap row;
   max-width: 1366px;
-  background-color: #ececec;
+  margin: 0 auto;
+  font-family: 'Lato', sans-serif;
+  background-color: #F0F0F0;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 30px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FC755B), to(#FD5272));
+  background: linear-gradient(to bottom, #FC755B, #FD5272);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 12px;
+  color: #777777;
+  text-transform: capitalize;
 }
 
 /*Navigation aside
 ============================================================*/
-.nav-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
+.nav-sidebar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,16 +82,27 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 500px;
-  background-color: #fd5470;
+  width: 73px;
+  height: 1000px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FC755B), to(#FD5272));
+  background: linear-gradient(to bottom, #FC755B, #FD5272);
 }
 
-.nav-bar__logo {
-  padding: 25px 18px 22px;
-  background: #fff;
+.nav-sidebar__logo {
+  padding: 25px 0 22px;
+  background: #FFFFFF;
 }
 
-.nav-bar div nav {
+.nav-sidebar div {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.nav-sidebar div nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -48,5 +110,63 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* Header
+============================================================*/
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(1366px - 73px);
+  background: #FFFFFF;
+  height: 166px;
+}
+
+.nav-header {
+  height: 100px;
+}
+
+.stactics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.stactics__item {
+  padding: 20px 0 22px;
+  text-align: left;
+}
+
+.stactics__item span {
+  font-weight: 700;
+  font-size: 20px;
+  background: -webkit-gradient(linear, left top, right top, from(#FC755B), to(#FD5272));
+  background: linear-gradient(to right, #FC755B, #FD5272);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.stactics-item__changes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.stactics-item__changes > p {
+  padding: 0 7.5px;
+  font-weight: 400;
+  font-size: 12px;
+  color: #BFBFBF;
 }
 /*# sourceMappingURL=main.css.map */
