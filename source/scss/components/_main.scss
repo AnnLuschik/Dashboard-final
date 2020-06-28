@@ -37,7 +37,6 @@ main {
     @include changes;
 }
 input[type="radio"] {
-    -webkit-appearance: none;
     visibility: hidden;
     display: none;
 }
@@ -127,12 +126,89 @@ input[type="radio"]:checked + label {
     display: flex;
     flex-direction: column;
 }
-
+/*Todays Task
+=======================================================*/
 .task {
     display: flex;
-    width: 501px;
-    height: 244px;
+    flex-direction: column;
 }
+.task h2 {
+    margin-bottom: 20px;
+}
+.task__list {
+    display: flex;
+    flex-direction: column;
+}
+.task-list__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-top: 1px solid $borderColor;
+}
+.task-list__item:last-of-type {
+    border-bottom: 1px solid $borderColor;
+}
+.task-item__check input[type="checkbox"] {
+    visibility: hidden;
+    display: none;
+}
+.task-item__check {
+    position: relative;
+    margin-left: 30px;
+    font-weight: 900;
+    font-size: $mediumFont;
+    cursor: pointer;
+    @include baseGradientText;    
+}
+.task-list__item span {
+    position: absolute;
+    top: -1px;
+    left: -28px;
+    z-index: 5;
+    display: block;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    border: 2px solid $borderColor;
+    cursor: pointer;
+}
+.task-item__check input[type="checkbox"]:checked ~ span {
+    @include baseGradientToLeft;  
+    border: none;  
+}
+.task-item__check input[type="checkbox"]:checked:before ~ span {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -28px;
+    z-index: 10;
+    width: 4px;
+    height: 10px;
+    background:yellow;
+}
+.task-list__item p {
+    @include standart-text;
+}
+.task-list__item time {
+    position: relative;
+    font-weight: 700;
+    font-size: $mediumFont;
+    color: $taskTimeColor;
+    text-align: left;
+}
+.task-item__time time:before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: -20px;
+    width: 12px;
+    height: 12px;
+    background: url(/source/img/clock.png);
+}
+
+
+
 
 .holder-box__final {
     display: flex;

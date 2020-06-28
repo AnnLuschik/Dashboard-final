@@ -11,7 +11,7 @@
 <body>
     <div class="wrapper">
         <aside class="nav-sidebar">
-            <div>
+            <div class="nav-sidebar__box">
                 <div class="nav-sidebar__logo">
                     <a href="#"><h1>W</h1></a>
                 </div>
@@ -21,9 +21,10 @@
                     <a href=""><img src="./source/img/nav-aside/user.png" alt="Users">Users</a>
                     <a href=""><img src="./source/img/nav-aside/settings.png" alt="Settings">Settings</a>
                     <a href=""><img src="./source/img/nav-aside/information.png" alt="Quires">Quires</a>
+                    <a href=""><img src="./source/img/nav-aside/power-button.png" alt="Log out"></a>
                 </nav>
             </div>
-            <button class="nav-sidebar__logout"><img src="./source/img/nav-aside/power-button.png" alt="Log out"></button>
+            <!-- <button class="nav-sidebar__logout"></button> -->
         </aside>
 
         <div class="container">
@@ -141,6 +142,48 @@
                     <div class="holder__box">
                         <section class="task inner">
                             <h2>Todays task</h2>
+                            <ul class="task__list">
+                                <li class="task-list__item">
+                                    <label class="task-item__check">Arrange
+                                        <input type="checkbox" id="check-arrange">
+                                        <span for="check-arrange"></span>
+                                    </label>
+                                    <p>simply dummy text of the printing and......</p>
+                                    <div class="task-item__time">
+                                        <time datetime="00:34">12:24 AM</time>
+                                    </div> 
+                                </li>
+                                <li class="task-list__item">
+                                    <label class="task-item__check">Shipment
+                                        <input type="checkbox" id="check-shipment">
+                                        <span for="check-shipment"></span>
+                                    </label>
+                                    <p>simply dummy text of the printing and......</p>
+                                    <div class="task-item__time">
+                                        <time datetime="01:10">1:10 AM</time>
+                                    </div>
+                                </li>
+                                <li class="task-list__item">
+                                    <label class="task-item__check">Make list
+                                        <input type="checkbox" id="check-make-list">
+                                        <span for="check-make-list"></span>
+                                    </label>
+                                    <p>simply dummy text of the printing and......</p>
+                                    <div class="task-item__time">
+                                        <time datetime="01:24">1:24 AM</time>
+                                    </div>
+                                </li>
+                                <li class="task-list__item">
+                                    <label class="task-item__check">Review
+                                        <input type="checkbox" id="review">
+                                        <span for="review"></span>
+                                    </label>
+                                    <p>simply dummy text of the printing and......</p>
+                                    <div class="task-item__time">
+                                        <time datetime="01:30">1:30 AM</time>
+                                    </div>
+                                </li>
+                            </ul>
                         </section>
                         <div class="holder-box__final">
                             <section class="progress inner">

@@ -284,7 +284,6 @@ main {
 }
 
 input[type="radio"] {
-  -webkit-appearance: none;
   visibility: hidden;
   display: none;
 }
@@ -411,12 +410,121 @@ input[type="radio"]:checked + label {
           flex-direction: column;
 }
 
+/*Todays Task
+=======================================================*/
 .task {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 501px;
-  height: 244px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.task h2 {
+  margin-bottom: 20px;
+}
+
+.task__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.task-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px 0;
+  border-top: 1px solid #F1F1F1;
+}
+
+.task-list__item:last-of-type {
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.task-item__check input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+
+.task-item__check {
+  position: relative;
+  margin-left: 30px;
+  font-weight: 900;
+  font-size: 12px;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, right top, from(#FC755B), to(#FD5272));
+  background: linear-gradient(to right, #FC755B, #FD5272);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.task-list__item span {
+  position: absolute;
+  top: -1px;
+  left: -28px;
+  z-index: 5;
+  display: block;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: 2px solid #F1F1F1;
+  cursor: pointer;
+}
+
+.task-item__check input[type="checkbox"]:checked ~ span {
+  background: -webkit-gradient(linear, right top, left top, from(#FC755B), to(#FD5272));
+  background: linear-gradient(to left, #FC755B, #FD5272);
+  border: none;
+}
+
+.task-item__check input[type="checkbox"]:checked:before ~ span {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -28px;
+  z-index: 10;
+  width: 4px;
+  height: 10px;
+  background: yellow;
+}
+
+.task-list__item p {
+  font-weight: 400;
+  font-size: 12px;
+  color: #BFBFBF;
+}
+
+.task-list__item time {
+  position: relative;
+  font-weight: 700;
+  font-size: 12px;
+  color: #9C9C9C;
+  text-align: left;
+}
+
+.task-item__time time:before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: -20px;
+  width: 12px;
+  height: 12px;
+  background: url(/source/img/clock.png);
 }
 
 .holder-box__final {
@@ -682,17 +790,14 @@ h4 {
           justify-content: center;
 }
 
-.nav-sidebar div nav {
+.nav-sidebar__box nav a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.nav-sidebar__box nav a:last-of-type {
+  margin-top: auto;
 }
 
 /*Right sidebar
@@ -732,7 +837,7 @@ h4 {
   background-color: #C54357;
 }
 
-.right-sidebar__btn:hover::before {
+.right-sidebar__btn:hover:before {
   content: '';
   position: absolute;
   top: 100%;
