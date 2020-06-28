@@ -67,11 +67,6 @@ header {
     padding: 20px 0 22px;
     text-align: left;
 }
-.stactics__item {
-    span {
-        @include stactics-number;
-    }            
-}
 .stactics-item__changes {
     display: flex;
 }
@@ -80,7 +75,7 @@ header {
     @include changes;
 }
 .stactics__btn button {
-    padding: 20px 0 22px;
+    padding: 20px 20px 22px 0;
     cursor: pointer;
     @include small-title;
     @include baseGradientText;

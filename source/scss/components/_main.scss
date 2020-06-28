@@ -13,6 +13,11 @@ main {
     padding: 30px;
     box-shadow: 0 0 3px 6px $borderShadowColor;
 }
+.inner--narrow {
+    margin: 10px;
+    padding: 30px 25px;
+    box-shadow: 0 0 3px 6px $borderShadowColor;    
+}
 /*Monthly Revenue Progress
 =======================================================*/
 .monthly-progress {
@@ -147,7 +152,23 @@ input[type="radio"]:checked + label {
 .shipment {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    width: 241px;
-    height: 245px;
+}
+.shipment > h2 {
+    margin-bottom: 24px;
+}
+.shipment__map {
+    margin-bottom: 19px;
+}
+.shipment__value {
+    display: flex;
+}
+.shipment-value__changes {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+.shipment-value__changes > p {
+    padding: 0 7.5px;
 }
