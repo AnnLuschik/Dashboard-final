@@ -24,6 +24,20 @@
 section {
     background-color: #FFFFFF;
 }
+.increase {
+    position: relative;
+    @include changes;
+}
+.increase:before {
+    @include increase;
+}
+.decrease {
+    position: relative; 
+    @include changes;
+}
+.decrease:before {
+    @include decrease;
+}
 
 /*----------------Font styles-----------------------------*/
 h1 {
@@ -36,6 +50,9 @@ h2 {
 }
 h3 {
     @include small-title;
+}
+h4 {
+    @include stactics-number;
 }
 
 /*Navigation aside

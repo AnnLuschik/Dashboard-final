@@ -36,7 +36,6 @@ input[type="radio"] {
     visibility: hidden;
     display: none;
 }
-
 .check {
     display: flex;
     justify-content: center;
@@ -44,16 +43,13 @@ input[type="radio"] {
     margin: 0 6px;
     cursor: pointer;
 }
-
 input[type="radio"]:checked + label {
     width: 66px;
     height: 24px;
     border-radius: 10px;
     color: $sectionBcg;  
     background: linear-gradient(to left, $gradientBaseStart, $gradientBaseEnd);
-
 }
-
 /*Revenue Per Hour
 =======================================================*/
 .hour-revenue {
@@ -62,12 +58,10 @@ input[type="radio"]:checked + label {
     align-items: center;
     justify-content: space-between;
 }
-
 .hour-revenue > h2 {
     margin-bottom: 30px;
     // padding: 0 75px 0 27px;
 }
-
 .pie-chart {
     position: relative;
     width: 124px;
@@ -76,7 +70,6 @@ input[type="radio"]:checked + label {
     border-radius: 50%;
    @include pieChartGradient;
 }
-
 .pie-chart span {
     position: absolute;
     top: 45px;
@@ -95,7 +88,6 @@ input[type="radio"]:checked + label {
     bottom: 10px;
     left: 10px;
     z-index: 15;
-    // border: 1px solid $borderColor;
     border-radius: 50%;
     background-color: $sectionBcg;    
 }
@@ -112,16 +104,12 @@ input[type="radio"]:checked + label {
     background-color: $sectionBcg; 
     box-shadow: 0 0 5px 5px $borderShadowColor; 
 }
-
 .hour-revenue__changes {
     display: flex;
 }
-
 .hour-revenue__changes > p {
     padding: 0 7.5px;
-    @include changes; 
 }
-
 /*Customers feed
 =======================================================*/
 
@@ -144,7 +132,8 @@ input[type="radio"]:checked + label {
 .holder-box__final {
     display: flex;
 }
-
+/*Progress
+=======================================================*/
 .progress {
     display: flex;
     flex-direction: column;
@@ -153,6 +142,8 @@ input[type="radio"]:checked + label {
     height: 244px;
 }
 
+/*Shipment
+=======================================================*/
 .shipment {
     display: flex;
     flex-direction: column;
