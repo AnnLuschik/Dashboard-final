@@ -21,7 +21,7 @@ header {
     height: 16px;
     margin: 0 20px;
     border-radius: 20px;
-    background: linear-gradient(to left, $gradientBaseStart, $gradientBaseEnd);
+    @include baseGradientToLeft;
 }
 .nav-header__search {
     margin: 18px 187px;

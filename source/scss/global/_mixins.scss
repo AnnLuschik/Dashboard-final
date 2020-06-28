@@ -34,6 +34,10 @@
     background: linear-gradient(to bottom, $gradientBaseStart, $gradientBaseEnd);    
 }
 
+@mixin baseGradientToLeft {
+    background: linear-gradient(to left, $gradientBaseStart, $gradientBaseEnd);    
+}
+
 @mixin baseGradientText {
     background: linear-gradient(to right, $gradientBaseStart, $gradientBaseEnd);
     background-size: 100%;
