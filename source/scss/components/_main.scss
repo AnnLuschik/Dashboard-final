@@ -1,4 +1,4 @@
-/*Main 
+/*Common styles
 =======================================================*/
 main {
     display: flex;
@@ -8,29 +8,109 @@ main {
     padding: 10px;
     background-color: $bcg;
 }
-
 .inner {
     margin: 10px;
-    
+    padding: 30px;
+    box-shadow: 0 0 3px 6px $borderShadowColor;
 }
-
+/*Monthly Revenue Progress
+=======================================================*/
 .monthly-progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 704px;
-    height: 266px;
+}
+.monthly-progress__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+.title__period {
+    display: flex;
+    margin-right: 57px;
+    @include changes;
+}
+input[type="radio"] {
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
 }
 
+.check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+    width: 66px;
+    height: 24px;
+    border-radius: 10px;
+    color: $sectionBcg;  
+    background: linear-gradient(to left, $gradientBaseStart, $gradientBaseEnd);
+
+}
+
+/*Revenue Per Hour
+=======================================================*/
 .hour-revenue {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 0;
-    width: 264px;
 }
 
 .hour-revenue > h2 {
     margin-bottom: 30px;
+    // padding: 0 75px 0 27px;
+}
 
+.pie-chart {
+    position: relative;
+    width: 124px;
+    height: 124px;
+    margin: 0 39px 32px;
+    border-radius: 50%;
+   @include pieChartGradient;
+}
+
+.pie-chart span {
+    position: absolute;
+    top: 45px;
+    left: 33px;
+    z-index: 25;
+    font-weight: 700;
+    font-size: $big-numberFont;
+    @include pieChartGradientText;
+}
+
+.pie-chart:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    z-index: 15;
+    // border: 1px solid $borderColor;
+    border-radius: 50%;
+    background-color: $sectionBcg;    
+}
+
+.pie-chart:after {
+    content: '';
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    bottom: 18px;
+    left: 18px;
+    z-index: 20;
+    border-radius: 50%;
+    background-color: $sectionBcg; 
+    box-shadow: 0 0 5px 5px $borderShadowColor; 
 }
 
 .hour-revenue__changes {
@@ -41,6 +121,9 @@ main {
     padding: 0 7.5px;
     @include changes; 
 }
+
+/*Customers feed
+=======================================================*/
 
 .feed {
     width: 467px;
@@ -53,6 +136,7 @@ main {
 }
 
 .task {
+    display: flex;
     width: 501px;
     height: 244px;
 }
@@ -62,11 +146,17 @@ main {
 }
 
 .progress {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 241px;
     height: 244px;
 }
 
 .shipment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 241px;
     height: 245px;
 }

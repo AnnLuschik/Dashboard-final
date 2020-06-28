@@ -28,7 +28,7 @@
         <div class="container">
             <header>
                 <div class="nav-header">
-                    <div class="nav-header__icon nav-header__rectangle"></div>
+                    <div class="nav-header__rectangle"></div>
                     <div class="nav-header__icon"><img src="./source/img/header/folder.png" alt="Folders"></div>
                     <div class="nav-header__icon"><img src="./source/img/header/header-settings.png" alt="Settings"> </div>
                     <div><input class="nav-header__search" type="search" placeholder="Search anything here...."></div>
@@ -43,7 +43,6 @@
                         </div>
                     </div>
                 </div>
-        
                 <div class="stactics"> 
                     <div class="stactics__item">
                         <h3>Daily visitors</h3>
@@ -110,23 +109,45 @@
             <div class="holder">
                 <main>
                     <section class="monthly-progress inner">
-                        <h2>Monthly Revenue Progress</h2>
-                        
+                        <div class="monthly-progress__title">
+                            <h2>Monthly Revenue Progress</h2>
+                            <div class="title__period">
+                                <input type="radio" name="period" id="month" value="month" checked>
+                                <label class="check" for="month">Month</label>
+                                <input type="radio" name="period" id="day" value="day">
+                                <label class="check" for="day">Day</label>
+                                <input type="radio" name="period" id="year" value="year">
+                                <label class="check" for="year">Year</label>
+                            </div>
+                        </div>
+                        <div class="monthly-progress__chart">
+                            <div class="chart__amount"></div>
+                            <div class="chart__img"></div>
+                            <div class="chart__month"></div>
+                        </div>
                     </section>
                     <section class="hour-revenue inner">
                         <h2>Revenue per hour</h2>
-                        <div class="pie-chart"></div>
+                        <div class="pie-chart"><span>150$</span></div>
                         <div class="hour-revenue__changes">
                             <p>1020</p>
                             <p>1020</p>
                         </div>
                     </section>
-                    <section class="feed inner"></section>
+                    <section class="feed inner">
+                        <h2>Customers feed</h2>
+                    </section>
                     <div class="holder__box">
-                        <section class="task inner"></section>
+                        <section class="task inner">
+                            <h2>Todays task</h2>
+                        </section>
                         <div class="holder-box__final">
-                            <section class="progress inner"></section>
-                            <section class="shipment inner"></section>
+                            <section class="progress inner">
+                                <h2>Progress</h2>
+                            </section>
+                            <section class="shipment inner">
+                                <h2>Shipments</h2>
+                            </section>
                         </div>
                     </div>
                 </main>

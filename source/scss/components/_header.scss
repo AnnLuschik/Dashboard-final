@@ -19,6 +19,7 @@ header {
 .nav-header__rectangle {
     width: 32px;    
     height: 16px;
+    margin: 0 20px;
     border-radius: 20px;
     background: linear-gradient(to left, $gradientBaseStart, $gradientBaseEnd);
 }
@@ -38,9 +39,10 @@ header {
     align-items: center;
 }
 .nav-header-user__main {
-    padding: 0 72px 0 18px;
+    padding: 0 55px 0 18px;
 }
 .nav-header-user__main > h4 {
+    margin-bottom: 9px;
     font-weight: 700;
     font-size: $nameFont;
     @include baseGradientText;

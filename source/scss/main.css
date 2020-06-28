@@ -103,6 +103,7 @@ header {
 .nav-header__rectangle {
   width: 32px;
   height: 16px;
+  margin: 0 20px;
   border-radius: 20px;
   background: -webkit-gradient(linear, right top, left top, from(#FC755B), to(#FD5272));
   background: linear-gradient(to left, #FC755B, #FD5272);
@@ -130,10 +131,11 @@ header {
 }
 
 .nav-header-user__main {
-  padding: 0 72px 0 18px;
+  padding: 0 55px 0 18px;
 }
 
 .nav-header-user__main > h4 {
+  margin-bottom: 9px;
   font-weight: 700;
   font-size: 13px;
   background: -webkit-gradient(linear, left top, right top, from(#FC755B), to(#FD5272));
@@ -212,7 +214,7 @@ header {
   color: transparent;
 }
 
-/*Main 
+/*Common styles
 =======================================================*/
 main {
   display: -webkit-box;
@@ -233,13 +235,80 @@ main {
 
 .inner {
   margin: 10px;
+  padding: 30px;
+  -webkit-box-shadow: 0 0 3px 6px #EDEDED;
+          box-shadow: 0 0 3px 6px #EDEDED;
 }
 
+/*Monthly Revenue Progress
+=======================================================*/
 .monthly-progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 704px;
-  height: 266px;
 }
 
+.monthly-progress__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+}
+
+.title__period {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 57px;
+  font-weight: 700;
+  font-size: 12px;
+  color: #BFBFBF;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+}
+
+.check {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 6px;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + label {
+  width: 66px;
+  height: 24px;
+  border-radius: 10px;
+  color: #FFFFFF;
+  background: -webkit-gradient(linear, right top, left top, from(#FC755B), to(#FD5272));
+  background: linear-gradient(to left, #FC755B, #FD5272);
+}
+
+/*Revenue Per Hour
+=======================================================*/
 .hour-revenue {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -254,12 +323,60 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 30px 0;
-  width: 264px;
 }
 
 .hour-revenue > h2 {
   margin-bottom: 30px;
+}
+
+.pie-chart {
+  position: relative;
+  width: 124px;
+  height: 124px;
+  margin: 0 39px 32px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #AB6BDD, #6B5BB4);
+}
+
+.pie-chart span {
+  position: absolute;
+  top: 45px;
+  left: 33px;
+  z-index: 25;
+  font-weight: 700;
+  font-size: 25px;
+  background: -webkit-gradient(linear, left top, right top, from(#AB6BDD), to(#6B5BB4));
+  background: linear-gradient(to right, #AB6BDD, #6B5BB4);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.pie-chart:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 10px;
+  z-index: 15;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+}
+
+.pie-chart:after {
+  content: '';
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  z-index: 20;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0 0 5px 5px #EDEDED;
+          box-shadow: 0 0 5px 5px #EDEDED;
 }
 
 .hour-revenue__changes {
@@ -275,6 +392,8 @@ main {
   color: #BFBFBF;
 }
 
+/*Customers feed
+=======================================================*/
 .feed {
   width: 467px;
   height: 508px;
@@ -291,6 +410,9 @@ main {
 }
 
 .task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 501px;
   height: 244px;
 }
@@ -302,11 +424,31 @@ main {
 }
 
 .progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 241px;
   height: 244px;
 }
 
 .shipment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 241px;
   height: 245px;
 }
@@ -396,7 +538,7 @@ h3 {
 }
 
 .nav-sidebar__logo {
-  padding: 25px 0 22px;
+  padding: 20px 0 18px;
   background: #FFFFFF;
 }
 

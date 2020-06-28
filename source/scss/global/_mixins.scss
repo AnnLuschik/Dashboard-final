@@ -49,3 +49,15 @@
     background-clip: text;
     color: transparent;
 }
+
+@mixin pieChartGradient {
+    background: linear-gradient(135deg, $gradientPieChartStart, $gradientPieChartEnd);    
+}
+
+@mixin pieChartGradientText {
+    background: linear-gradient(to right, $gradientPieChartStart, $gradientPieChartEnd); 
+    background-size: 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;   
+}
