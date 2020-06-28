@@ -610,6 +610,7 @@ section {
 h1 {
   font-weight: 400;
   font-size: 30px;
+  font-family: 'Deftone Stylus', Arial, sans-serif;
   background: -webkit-gradient(linear, left top, left bottom, from(#FC755B), to(#FD5272));
   background: linear-gradient(to bottom, #FC755B, #FD5272);
   background-size: 100%;
@@ -708,6 +709,37 @@ h4 {
       -ms-flex: 0 0 20%;
           flex: 0 0 20%;
   height: 834px;
-  background-color: red;
+  background-color: #FFFFFF;
+}
+
+.right-sidebar nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background: -webkit-gradient(linear, right top, left top, from(#FC755B), to(#FD5272));
+  background: linear-gradient(to left, #FC755B, #FD5272);
+}
+
+.right-sidebar__btn {
+  position: relative;
+  padding: 13px 32px;
+  cursor: pointer;
+}
+
+.right-sidebar__btn:hover {
+  background-color: #C54357;
+}
+
+.right-sidebar__btn:hover::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 45%;
+  width: 12px;
+  height: 12px;
+  border: 6px solid transparent;
+  border-top: 6px solid #C54357;
 }
 /*# sourceMappingURL=main.css.map */

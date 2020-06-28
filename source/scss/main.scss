@@ -5,6 +5,7 @@
 @import "./components/header";
 @import "./components/main";
 
+
 /*---------------Common styles------------------------*/
 .wrapper {
     display: flex;
@@ -43,6 +44,7 @@ section {
 h1 {
     font-weight: 400;
     font-size: $hugeFont;
+    font-family: 'Deftone Stylus', Arial, sans-serif;
     @include baseGradientLogo;
 }
 h2 {
@@ -93,5 +95,29 @@ h4 {
     flex-direction: column;
     flex: 0 0 20%;
     height: 834px;
-    background-color: red;
+    background-color: $sectionBcg;
+}
+.right-sidebar nav {
+    display: flex;
+    justify-content: space-around;
+    @include baseGradientToLeft;
+}
+.right-sidebar__btn {
+    position: relative;
+    padding: 13px 32px;
+    cursor: pointer;
+}
+.right-sidebar__btn:hover {
+    background-color: #C54357; 
+}
+.right-sidebar__btn:hover::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 45%;
+    width: 12px;
+    height: 12px;
+    border: 6px solid transparent;
+    border-top: 6px solid #C54357;
+    // background-color: #C54357; 
 }
