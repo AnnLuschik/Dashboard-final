@@ -21,7 +21,7 @@ header {
     height: 16px;
     margin: 0 20px;
     border-radius: 20px;
-    @include baseGradientToLeft;
+    @include gradient;
 }
 .nav-header__search {
     width: 299px;
@@ -49,28 +49,16 @@ header {
     height: 16px;
     background: url(/source/img/search.png);
 }
-.nav-header__user {
-    display: flex;
-    align-items: center;
-}
-.nav-header-user__main {
+.nav-header-person__main {
     padding: 0 55px 0 18px;
 }
-.nav-header-user__main > h4 {
-    margin-bottom: 9px;
-    font-weight: 700;
-    font-size: $nameFont;
-    @include baseGradientText;
-    text-transform: capitalize;
+.nav-header-person__main > h5 {
+    @include gradientText;
 }
-.nav-header-user__main > h4::first-letter {
+.nav-header-person__main > h5::first-letter {
     text-transform: lowercase;
 }
-.nav-header-user__main > p {
-    font-weight: 700;
-    font-size: $smallFont;
-    color: $textColor;
-}
+
 /* Bottom part of header: stactics
 ============================================================*/
 .stactics {
@@ -100,5 +88,5 @@ header {
     padding: 20px 20px 22px 0;
     cursor: pointer;
     @include small-title;
-    @include baseGradientText;
+    @include gradientText;
 }
