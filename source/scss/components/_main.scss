@@ -18,6 +18,14 @@ main {
     padding: 30px 25px;
     box-shadow: 0 0 3px 6px $borderShadowColor;    
 }
+.holder__box {
+    display: flex;
+    flex-direction: column;
+}
+.holder-box__final {
+    display: flex;
+    flex-flow: row wrap;
+}
 /*Monthly Revenue Progress
 =======================================================*/
 .monthly-progress {
@@ -64,7 +72,6 @@ input[type="radio"]:checked + label {
 }
 .hour-revenue > h2 {
     margin-bottom: 30px;
-    // padding: 0 75px 0 27px;
 }
 .pie-chart {
     position: relative;
@@ -83,7 +90,6 @@ input[type="radio"]:checked + label {
     font-size: $big-numberFont;
     @include pieChartGradientText;
 }
-
 .pie-chart:before {
     content: '';
     position: absolute;
@@ -95,7 +101,6 @@ input[type="radio"]:checked + label {
     border-radius: 50%;
     background-color: $sectionBcg;    
 }
-
 .pie-chart:after {
     content: '';
     position: absolute;
@@ -116,20 +121,79 @@ input[type="radio"]:checked + label {
 }
 /*Customers feed
 =======================================================*/
-
 .feed {
-    width: 467px;
-    height: 508px;
-}
-
-.holder__box {
     display: flex;
     flex-direction: column;
+    flex: 1 0;
+}
+.feed h2 {
+    margin-bottom: 38px;
+}
+.feed-box__list {                           /*Первый уровень списка*/
+    display: flex;
+    flex-direction: column;
+}
+.feed-box__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 18px;
+}
+.feed-box__item ul {                        /*Второй уровень списка*/
+    position: relative;
+    margin-left: 90px;
+}
+.feed-box-item__msg:not(:last-of-type) {
+    margin-bottom: 18px;    
+}
+.feed-box__item ul:before {                 
+    content: ''; 
+    position: absolute;   
+    top: 0;
+    left: -17px;
+    width: 4px;
+    height: 100%;
+    background: $borderColor;
+}
+.feed-box-item__main-msg {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 18px;
+}
+.feed-box-item__main-msg figure {
+    margin-right: 20px;    
+}
+.feed-box-item__main-msg img {
+    width: 43px;
+    height: 43px;
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+.feed-box-item__main-msg figcaption {
+    font-weight: 400; 
+    font-size: $tinyFont;
+    color: $messageTimeColor;   
+}
+.feed-box-item__text {
+    @include standart-text;
+    padding: 20px 22px 18px 21px;
+    border: 1px solid $borderColor;
+}
+.feed-box-item__text--narrow {
+    @include standart-text;
+    padding: 20px 20px 18px;
+    border: 1px solid $borderColor;
+}
+.feed-box-item__text span,
+.feed-box-item__text--narrow span {
+    font-weight: 900;
+    color: $titleColor;
 }
 /*Todays Task
 =======================================================*/
 .task {
     display: flex;
+    flex: 1 100%;
     flex-direction: column;
 }
 .task h2 {
@@ -177,7 +241,7 @@ input[type="radio"]:checked + label {
     @include baseGradientToLeft;  
     border: none;  
 }
-.task-item__check input[type="checkbox"]:checked:before ~ span {
+.task-item__check input[type="checkbox"]:checked:before ~ span {  /*не работает*/
     content: '';
     position: absolute;
     top: 0;
@@ -205,13 +269,6 @@ input[type="radio"]:checked + label {
     width: 12px;
     height: 12px;
     background: url(/source/img/clock.png);
-}
-
-
-
-
-.holder-box__final {
-    display: flex;
 }
 /*Progress
 =======================================================*/
@@ -246,7 +303,6 @@ input[type="radio"]:checked + label {
 .h4--modify {
     @include barChartGradientText;
 }
-
 /*Shipment
 =======================================================*/
 .shipment {

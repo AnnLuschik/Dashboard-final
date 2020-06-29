@@ -69,6 +69,8 @@ h4 {
     @include baseGradient;
 }
 .nav-sidebar__logo {
+    align-items: center;
+    justify-content: center;
     padding: 20px 0 18px;
     background: $sectionBcg;
 }
