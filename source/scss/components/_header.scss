@@ -24,8 +24,9 @@ header {
     @include baseGradientToLeft;
 }
 .nav-header__search {
+    width: 299px;
     margin: 18px 187px;
-    padding: 11px 162px 11px 11px;
+    padding: 11px 11px;
     font-weight: 400;
     font-size: $mediumFont;
     color: $searchTextColor;
@@ -33,6 +34,20 @@ header {
     background: $searchColor;
     border: 1px solid $borderColor;
     border-radius: 20px;
+    @include placeholder;
+}
+.nav-header label {
+    position: relative;
+}
+.nav-header label:before {
+    content: '';
+    position: absolute;
+    z-index: 500;
+    top: 40%;
+    right: 30%;
+    width: 16px;
+    height: 16px;
+    background: url(/source/img/search.png);
 }
 .nav-header__user {
     display: flex;

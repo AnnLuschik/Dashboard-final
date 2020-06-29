@@ -270,6 +270,7 @@ input[type="radio"]:checked + label {
     height: 12px;
     background: url(/source/img/clock.png);
 }
+
 /*Progress
 =======================================================*/
 .progress {
@@ -303,6 +304,7 @@ input[type="radio"]:checked + label {
 .h4--modify {
     @include barChartGradientText;
 }
+
 /*Shipment
 =======================================================*/
 .shipment {

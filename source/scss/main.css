@@ -110,8 +110,9 @@ header {
 }
 
 .nav-header__search {
+  width: 299px;
   margin: 18px 187px;
-  padding: 11px 162px 11px 11px;
+  padding: 11px 11px;
   font-weight: 400;
   font-size: 12px;
   color: #C8C8C8;
@@ -119,6 +120,37 @@ header {
   background: #F8F8F8;
   border: 1px solid #F1F1F1;
   border-radius: 20px;
+}
+
+.nav-header__search::-webkit-input-placeholder {
+  color: #C8C8C8;
+}
+
+.nav-header__search:-moz-placeholder {
+  color: #C8C8C8;
+}
+
+.nav-header__search::-moz-placeholder {
+  color: #C8C8C8;
+}
+
+.nav-header__search:-ms-input-placeholder {
+  color: #C8C8C8;
+}
+
+.nav-header label {
+  position: relative;
+}
+
+.nav-header label:before {
+  content: '';
+  position: absolute;
+  z-index: 500;
+  top: 40%;
+  right: 30%;
+  width: 16px;
+  height: 16px;
+  background: url(/source/img/search.png);
 }
 
 .nav-header__user {
