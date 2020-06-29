@@ -37,10 +37,10 @@
                     <div class="nav-header__icon"><img src="./source/img/header/upload.png" alt="Upload arrow"></div>
                     <div class="nav-header__icon"><img src="./source/img/header/mail.png" alt="Letter"></div>
                     <div class="nav-header__icon"><img src="./source/img/header/planet-earth.png" alt="Planet Earth"></div>
-                    <div class="nav-header__user">
-                        <div class="nav-header-user__avatar"><img src="./source/img/header/avatar.jpeg" alt="Userpic"></div>
-                        <div class="nav-header-user__main">
-                            <h4>Kendall Jenner</h4>
+                    <div class="person">
+                        <div class="person-avatar nav-header-person__avatar"><img src="./source/img/header/avatar.jpeg" alt="Userpic"></div>
+                        <div class="person-main nav-header-person__main">
+                            <h5>Kendall Jenner</h5>
                             <p>Cheif authority</p>
                         </div>
                     </div>
@@ -123,9 +123,67 @@
                             </div>
                         </div>
                         <div class="monthly-progress__chart">
-                            <div class="chart__amount"></div>
-                            <div class="chart__img"></div>
-                            <div class="chart__month"></div>
+                            <div class="chart__amount">
+                                <ul>
+                                    <li>400k</li>
+                                    <li>300k</li>
+                                    <li>200k</li>
+                                    <li>100k</li>
+                                </ul>
+                            </div>
+                            <div class="chart__holder">
+                                <div class="chart__main">
+                                    <ul class="red-line">
+                                        <li style="--x: 3px; --y: 49px;">
+                                            <div class="data-point"></div>
+                                            <div class="line-segment" style="--hypotenuse: 49.5px; --angle: 44deg;"></div>
+                                        </li>
+                                        <li style="--x: 39px; --y: 15px;">
+                                            <div class="data-point"></div>
+                                            <div class="line-segment" style="--hypotenuse: 88.6px; --angle: -23.5deg;"></div>
+                                        </li>
+                                        <li style="--x: 120px; --y: 51px;">
+                                            <div class="data-point"></div>
+                                            <div class="line-segment" style="--hypotenuse: 116.7px; --angle: 16.4deg;"></div>
+                                        </li>
+                                        <li style="--x: 232px; --y: 18px;">
+                                            <div class="data-point"></div>
+                                            <div class="line-segment" style="--hypotenuse: 142.2px; --angle: -10deg;"></div>
+                                        </li>
+                                        <li style="--x: 372px; --y: 43px;">
+                                            <div class="data-point"></div>
+                                            <div class="line-segment" style="--hypotenuse: 81.4px; --angle: 27.5deg;"></div>
+                                        </li>
+                                        <li style="--x: 444px; --y: 5px;">
+                                            <div class="data-point"></div>
+                                            <div class="line-segment" style="--hypotenuse: 96.5px; --angle: -21deg;"></div>
+                                        </li>
+                                        <li style="--x: 534px; --y: 40px;">
+                                            <div class="data-point"></div>
+                                            <div class="line-segment" style="--hypotenuse: 39.1px; --angle: 34.5deg;"></div>
+                                        </li>
+                                        <li style="--x: 567px; --y: 19px;">
+                                            <div class="data-point"></div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="chart__month">
+                                    <ul>
+                                        <li>Jan</li>
+                                        <li>Feb</li>
+                                        <li>Mar</li>
+                                        <li>Apr</li>
+                                        <li>May</li>
+                                        <li>Jun</li>
+                                        <li>Jul</li>
+                                        <li>Aug</li>
+                                        <li>Sep</li>
+                                        <li>Oct</li>
+                                        <li>Nov</li>
+                                        <li>Doc</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </section>
                     <section class="hour-revenue inner">
@@ -261,18 +319,88 @@
                         <button class="right-sidebar__btn"><img src="./source/img/aside/like.png" alt="Like icon"></button>
                     </nav>
                     <div class="right-sidebar__content">
-
+                        <ul>
+                            <li>
+                                <div class="person person-right-sidebar">
+                                    <div class="person-avatar right-sidebar-person__avatar">
+                                        <img src="./source/img/aside/avatars/jennifer-lawrence.jpeg" alt="Userpic">
+                                    </div>
+                                    <div class="person-main right-sidebar-person__main">
+                                        <h5>Jennifer Lawrence</h5>
+                                        <p>Cheif authority</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="person person-right-sidebar">
+                                    <div class="person-avatar right-sidebar-person__avatar">
+                                        <img src="./source/img/aside/avatars/brad-pitt.jpeg" alt="Userpic">
+                                    </div>
+                                    <div class="person-main right-sidebar-person__main">
+                                        <h5>Brad Pitt</h5>
+                                        <p>Cheif authority</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="person person-right-sidebar">
+                                    <div class="person-avatar right-sidebar-person__avatar">
+                                        <img src="./source/img/aside/avatars/leonardo-dicaprio.jpeg" alt="Userpic">
+                                    </div>
+                                    <div class="person-main right-sidebar-person__main">
+                                        <h5>Leonardo Dicaprio</h5>
+                                        <p>Cheif authority</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="person person-right-sidebar">
+                                    <div class="person-avatar right-sidebar-person__avatar">
+                                        <img src="./source/img/aside/avatars/jesse-eisenberg.jpeg" alt="Userpic">
+                                    </div>
+                                    <div class="person-main right-sidebar-person__main">
+                                        <h5>Jesse Eisenberg</h5>
+                                        <p>Cheif authority</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="person person-right-sidebar">
+                                    <div class="person-avatar right-sidebar-person__avatar">
+                                        <img src="./source/img/aside/avatars/kristen-stewart.jpeg" alt="Userpic">
+                                    </div>
+                                    <div class="person-main right-sidebar-person__main">
+                                        <h5>Kristen Stewart</h5>
+                                        <p>Cheif authority</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="person person-right-sidebar">
+                                    <div class="person-avatar right-sidebar-person__avatar">
+                                        <img src="./source/img/aside/avatars/ben-affleck.jpeg" alt="Userpic">
+                                    </div>
+                                    <div class="person-main right-sidebar-person__main">
+                                        <h5>Ben Affleck</h5>
+                                        <p>Cheif authority</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                     <div class="right-sidebar__search">
-
+                        <input type="search" placeholder="Search peoples, chats and reviews">
                     </div>
                     <div class="right-sidebar__companies">
-                        <a href=""><img src="" alt=""></a>
-                        <a href=""><img src="" alt=""></a>
-                        <a href=""><img src="" alt=""></a>
-                        <a href=""><img src="" alt=""></a>
-                        <a href=""><img src="" alt=""></a>
-                        <a href=""><img src="" alt=""></a>
+                        <h2>Featured companies</h2>
+                        <ul>
+                            <li id="rdio"><a href="#"><img src="/source/img/aside/companies/rdio-logo.png" alt="Rdio logo"></a></li>
+                            <li id="css"><a href="#"><img src="/source/img/aside/companies/css-3-logo.png" alt="CSS 3 logo"></a></li>
+                            <li id="deviantart"><a href="#"><img src="/source/img/aside/companies/deviantart-logo.png" alt="Deviantart logo"></a></li>
+                            <li id="xing"><a href="#"><img src="/source/img/aside/companies/xing-logo.png" alt="Xing logo"></a></li>
+                            <li id="vimeo"><a href="#"><img src="/source/img/aside/companies/vimeo-logo.png" alt="Vimeo logo"></a></li>
+                            <li id="vk"><a href="#"><img src="/source/img/aside/companies/vk-logo.png" alt="VK social network logo"></a></li>
+                        </ul>   
                     </div>
                 </aside>
             </div>
