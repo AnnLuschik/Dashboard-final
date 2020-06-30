@@ -178,7 +178,7 @@ header {
   right: 30%;
   width: 16px;
   height: 16px;
-  background: url(/source/img/search.png);
+  background: url(./source/img/search.png);
 }
 
 .nav-header-person__main {
