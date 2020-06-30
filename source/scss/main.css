@@ -113,7 +113,7 @@ header {
 .nav-header__icon:not(:first-child):before {
   content: '';
   position: absolute;
-  width: 100%;
+  width: 50%;
   height: 100%;
   background: -webkit-gradient(linear, right top, left top, from(#FC755B), to(#FD5272));
   background: linear-gradient(to left, #FC755B, #FD5272);
