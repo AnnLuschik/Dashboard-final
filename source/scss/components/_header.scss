@@ -66,12 +66,12 @@ header {
 .nav-header label:before {
     content: '';
     position: absolute;
-    z-index: 500;
+    z-index: 5;
     top: 40%;
     right: 30%;
     width: 16px;
     height: 16px;
-    background: url(../../img/search.png);
+    background: url(../img/search.png);
 }
 .nav-header-person__main {
     padding: 0 55px 0 18px;
