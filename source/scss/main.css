@@ -105,8 +105,19 @@ header {
 }
 
 .nav-header__icon {
+  position: relative;
   padding: 0 18px;
   border-right: 1px solid #F1F1F1;
+}
+
+.nav-header__icon:not(:first-child):before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, right top, left top, from(#FC755B), to(#FD5272));
+  background: linear-gradient(to left, #FC755B, #FD5272);
+  mix-blend-mode: screen;
 }
 
 .nav-header__icon:first-child {
