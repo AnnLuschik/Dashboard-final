@@ -2,7 +2,6 @@
 =======================================================*/
 main {
     display: flex;
-    flex: 1;
     flex-flow: wrap row;
     justify-content: space-around;
     padding: 10px;
@@ -30,6 +29,7 @@ main {
 =======================================================*/
 .monthly-progress {
     display: flex;
+    flex: 1 0;
     flex-direction: column;
 }
 .monthly-progress__title {
@@ -116,7 +116,7 @@ input[type="radio"]:checked + label {
 .monthly-progress__chart li p {
     @include changes;
 }
-                    /*График*/
+/*----------------График-------------------*/
 .data-point {
     content: '';
     position: absolute;
@@ -144,6 +144,7 @@ input[type="radio"]:checked + label {
 .hour-revenue {
     display: flex;
     flex-direction: column;
+    flex: 1 0;  
     align-items: center;
     justify-content: space-between;
 }
@@ -270,7 +271,7 @@ input[type="radio"]:checked + label {
 =======================================================*/
 .task {
     display: flex;
-    flex: 1 100%;
+    // flex: 1 100%;
     flex-direction: column;
 }
 .task h2 {

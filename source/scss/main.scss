@@ -4,7 +4,7 @@
 @import "./global/normalize";
 @import "./components/header";
 @import "./components/main";
-
+@import "./global/media";
 
 /*---------------Common styles------------------------*/
 .wrapper {
@@ -43,6 +43,9 @@ section {
     display: flex;
     align-items: center;
 }
+// .person-avatar img {
+//     height: 100%;    
+// }
 .person-main {
     display: flex;
     flex-direction: column;
@@ -84,43 +87,54 @@ h5 {
 .nav-sidebar {
     display: flex;
     flex-direction: column;
-    flex: 0 0 5.5%;
-    justify-content: space-between;
+    // flex: 0 0;
+    justify-content: flex-start;
     align-items: center;
     @include gradient (to bottom);
 }
 .nav-sidebar__logo {
-    padding: 20px 0 18px;
+    padding: 20px 0;
     background: $sectionBcg;
-
+    width: 100%;
     a {
         display: flex;
         justify-content: center;
     }
 }
-.nav-sidebar {
-    div {
-        align-items: center;
-        justify-content: center;
-    }
-}
-.nav-sidebar__box nav {
+.nav-sidebar nav {
     display: flex;
     flex-direction: column;
+    height: 100%;
+    padding: 0 15px;
 
     a {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 30px;
         color: $sectionBcg;
 
-        &:first-of-type {
+        &:first-child {
             padding-top: 30px;
             
         }
-        &:last-of-type {
+        &:last-child {
             margin-top: auto;
+        }
+        &:hover {
+           position: relative;
+        }
+
+        &:hover:not(:last-of-type):before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: calc(100% + 15px);
+            // width: 6px;
+            // height: 6px;
+            border: 8px solid transparent;
+            border-left: 6px solid #FC725E;
         }
 
         img {
@@ -134,7 +148,7 @@ h5 {
 .right-sidebar {
     display: flex;
     flex-direction: column;
-    flex: 0 0 20%;
+    // flex: 0 0 20%;
     background-color: $sectionBcg;
 }
 .right-sidebar nav {

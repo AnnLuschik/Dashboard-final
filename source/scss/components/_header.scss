@@ -9,12 +9,26 @@ header {
 .nav-header {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     border-bottom: 1px solid $borderColor;
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 .nav-header__icon {
     padding: 0 18px; 
     border-right: 1px solid $borderColor;
+
+    &:first-child {
+        padding-left: 0;
+    }
+
+    &:last-child {
+        border: none;
+    }
 }
 .nav-header__rectangle {
     width: 32px;    
@@ -58,7 +72,6 @@ header {
 .nav-header-person__main > h5::first-letter {
     text-transform: lowercase;
 }
-
 /* Bottom part of header: stactics
 ============================================================*/
 .stactics {
