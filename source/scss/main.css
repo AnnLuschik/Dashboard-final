@@ -462,7 +462,6 @@ input[type="radio"]:checked + label {
   z-index: 5;
   width: 6px;
   height: 6px;
-  background-color: #FD5272;
 }
 
 .line-segment {
@@ -477,7 +476,30 @@ input[type="radio"]:checked + label {
           transform: rotate(var(--angle));
   -webkit-transform-origin: left bottom;
           transform-origin: left bottom;
+}
+
+.red-line .data-point {
   background: #FD5272;
+}
+
+.red-line .line-segment {
+  background: #FD5272;
+}
+
+.blue-line .data-point {
+  background: #5BCCFF;
+}
+
+.blue-line .line-segment {
+  background: #5BCCFF;
+}
+
+.purple-line .data-point {
+  background: #A889E9;
+}
+
+.purple-line .line-segment {
+  background: #A889E9;
 }
 
 /*Revenue Per Hour

@@ -125,7 +125,6 @@ input[type="radio"]:checked + label {
     z-index: 5;
     width: 6px;
     height: 6px;
-    background-color: $gradientBaseEnd;
 }
 .line-segment {
     content: '';
@@ -137,7 +136,30 @@ input[type="radio"]:checked + label {
     height: 2px;
     transform: rotate(var(--angle));
     transform-origin: left bottom;
-    background: $gradientBaseEnd;
+}
+.red-line {
+    .data-point {
+        background: $gradientBaseEnd;
+    }
+    .line-segment {
+        background: $gradientBaseEnd;
+    }
+}
+.blue-line {
+    .data-point {
+        background: #5BCCFF;   
+    } 
+    .line-segment {
+        background: #5BCCFF;
+    }
+}
+.purple-line {
+    .data-point {
+        background: #A889E9;   
+    } 
+    .line-segment {
+        background: #A889E9;
+    }
 }
 /*Revenue Per Hour
 =======================================================*/
