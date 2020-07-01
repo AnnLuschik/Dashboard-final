@@ -39,6 +39,16 @@ header {
     &:last-child {
         border: none;
     }
+    
+    &:last-child:after {
+        content: '';
+        position: absolute;  
+        top: -5px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        @include gradient;  
+    }
 }
 .nav-header__rectangle {
     display: flex;

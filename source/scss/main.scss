@@ -163,7 +163,6 @@ h5 {
 }
 .right-sidebar nav {
     display: flex;
-    justify-content: space-around;
     @include gradient;
 }
 .right-sidebar__btn {
@@ -187,18 +186,49 @@ h5 {
 .right-sidebar__content {
     padding: 0 18px;
 }
-.right-sidebar__content li:not(:last-child) {
-    padding: 20px 0 22px;
-    border-bottom: 1px solid $borderColor;
+.person-right-sidebar {
+    display: flex;
+    justify-content: space-between;
 }
-.right-sidebar__content li:last-child {
-    padding: 19px 0 34px;
+.person-right-sidebar__box {
+    display: flex;
+    justify-content: flex-start;
 }
-.right-sidebar__content li:first-child {
-    padding: 24px 0 20px;
+.right-sidebar__content ul li {
+    position: relative;
+
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     top: calc(50% - 8px);
+    //     right: 0;
+    //     width: 20px;
+    //     height: 16px;
+    //     background: $textColor;
+    //     background-clip: content-box;
+    //     mask: url(../img/aside/chat.png);
+    // }
+
+    &:not(:last-child) {
+        padding: 20px 0 22px;
+        border-bottom: 1px solid $borderColor;
+    }
+    &:last-child {
+        padding: 19px 0 34px;
+    }
+    &:first-child {
+        padding: 24px 0 20px;
+    }
+}
+.right-sidebar a {
+    width: 20px;
+    height: 16px;
+    background: $textColor;
+    background-clip: content-box;
+    mask: url(../img/aside/chat.png);        
 }
 .right-sidebar-person__main {
-    padding: 0 50px 0 16px;
+    padding: 0 0 0 16px;
 }
 .right-sidebar-person__main h5 {
     color: $titleColor;   
