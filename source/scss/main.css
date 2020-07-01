@@ -129,12 +129,51 @@ header {
 }
 
 .nav-header__rectangle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 32px;
   height: 16px;
   margin: 0 20px;
   border-radius: 20px;
   background: -webkit-gradient(linear, right top, left top, from(#FC755B), to(#FD5272));
   background: linear-gradient(to left, #FC755B, #FD5272);
+}
+
+.dot {
+  position: relative;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FFFFFF;
+}
+
+.dot:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FFFFFF;
+}
+
+.dot:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FFFFFF;
 }
 
 .nav-header__search {
@@ -1085,6 +1124,7 @@ h5 {
 /*Navigation aside
 ============================================================*/
 .nav-sidebar {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

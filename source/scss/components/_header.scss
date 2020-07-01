@@ -41,11 +41,43 @@ header {
     }
 }
 .nav-header__rectangle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 32px;    
     height: 16px;
     margin: 0 20px;
     border-radius: 20px;
     @include gradient;
+}
+.dot {
+    position: relative;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: $sectionBcg;   
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -8px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $sectionBcg;
+    } 
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 8px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $sectionBcg;
+    } 
 }
 .nav-header__search {
     width: 299px;
