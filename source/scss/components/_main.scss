@@ -423,10 +423,39 @@ input[type="radio"]:checked + label {
 .progress > h2{
     margin: 0 62px 28px 62px;
 }
-.progress__chart img {
-    width: 145px;
+.progress__chart {
+    display: flex;
     margin-bottom: 20px;
-    object-fit: contain;
+}
+.progress-chart__item {
+    position: relative;
+    width: 11px;
+    height: 88px;
+    margin: 0 5px;
+    background: #f6f6f6;
+    border-radius: 5px;
+}
+.progress-chart__item:before {
+    content: '';
+    position: absolute;
+    left: calc(0% - 5.5px);
+    height: 46px; 
+    width: 11px;
+    margin: 0 5px;
+    @include gradient (to top, $gradientBarChartStart, $gradientBarChartEnd);
+    border-radius: 5px;
+}
+.progress-chart__item:nth-child(3n+1):before {
+    top: calc(100% - 46px);
+    height: 46px;    
+}
+.progress-chart__item:nth-child(3n+2):before {
+    top: calc(100% - 60px);
+    height: 60px;    
+}
+.progress-chart__item:nth-child(3n+3):before {
+    top: calc(100% - 40px);
+    height: 40px;    
 }
 .progress__value {
     display: flex;

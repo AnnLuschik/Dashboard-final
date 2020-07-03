@@ -1015,11 +1015,47 @@ input[type="radio"]:checked + label {
   margin: 0 62px 28px 62px;
 }
 
-.progress__chart img {
-  width: 145px;
+.progress__chart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-bottom: 20px;
-  -o-object-fit: contain;
-     object-fit: contain;
+}
+
+.progress-chart__item {
+  position: relative;
+  width: 11px;
+  height: 88px;
+  margin: 0 5px;
+  background: #f6f6f6;
+  border-radius: 5px;
+}
+
+.progress-chart__item:before {
+  content: '';
+  position: absolute;
+  left: calc(0% - 5.5px);
+  height: 46px;
+  width: 11px;
+  margin: 0 5px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#8645B2), to(#7089E5));
+  background: linear-gradient(to top, #8645B2, #7089E5);
+  border-radius: 5px;
+}
+
+.progress-chart__item:nth-child(3n+1):before {
+  top: calc(100% - 46px);
+  height: 46px;
+}
+
+.progress-chart__item:nth-child(3n+2):before {
+  top: calc(100% - 60px);
+  height: 60px;
+}
+
+.progress-chart__item:nth-child(3n+3):before {
+  top: calc(100% - 40px);
+  height: 40px;
 }
 
 .progress__value {
@@ -1053,7 +1089,7 @@ input[type="radio"]:checked + label {
 }
 
 .h4--modify {
-  background: linear-gradient(135deg, #AF6EDE, #7089E5);
+  background: linear-gradient(135deg, #8645B2, #7089E5);
   background-size: 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -1182,7 +1218,7 @@ input[type="radio"]:checked + label {
   content: '';
   position: absolute;
   top: 50%;
-  left: calc(100% + 15px);
+  left: calc(100% + 6px);
   border: 8px solid transparent;
   border-left: 6px solid #FC725E;
 }
@@ -1660,10 +1696,16 @@ h5 {
 }
 
 @media screen and (max-width: 710px) {
-  .nav-sidebar a:hover:not(:last-of-type):before {
-    top: 45px;
+  .nav-sidebar nav a {
+    position: relative;
+    margin: 0;
   }
-  .nav-sidebar a p {
+  .nav-sidebar nav a:hover:not(:last-of-type):before {
+    z-index: 25;
+    top: 45px;
+    left: 3px;
+  }
+  .nav-sidebar nav a p {
     display: none;
   }
   .nav-header__person {
