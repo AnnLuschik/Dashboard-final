@@ -1,6 +1,7 @@
 header {
     display: flex;
     flex-direction: column;
+    flex: 1 0 100%;
     background: $sectionBcg;
 }
 
@@ -8,20 +9,29 @@ header {
 ============================================================*/
 .nav-header {
     display: flex;
+    flex-wrap: wrap-reverse;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid $borderColor;
 
     nav {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
+        height: 100%;
     }
 }
 .nav-header__icon {
     position: relative;
+    height: 100%;
     padding: 0 18px; 
+    border: none;
     border-right: 1px solid $borderColor;
+
+    img {
+        margin: 27px 0;
+    }
 
     &:not(:first-child):before {
         content: '';
@@ -34,6 +44,7 @@ header {
 
     &:first-child {
         padding-left: 0;
+        border-left: 1px solid $borderColor;
     }
 
     &:last-child {
@@ -43,7 +54,7 @@ header {
     &:last-child:after {
         content: '';
         position: absolute;  
-        top: -5px;
+        top: 20px;
         width: 6px;
         height: 6px;
         border-radius: 50%;
@@ -56,7 +67,7 @@ header {
     align-items: center;
     width: 32px;    
     height: 16px;
-    margin: 0 20px;
+    margin: 29px 20px;
     border-radius: 20px;
     @include gradient;
 }
@@ -90,8 +101,8 @@ header {
     } 
 }
 .nav-header__search {
+    flex-basis: 30%;
     width: 299px;
-    margin: 18px 187px;
     padding: 11px 11px;
     font-weight: 400;
     font-size: $mediumFont;
@@ -104,35 +115,83 @@ header {
 }
 .nav-header label {
     position: relative;
+    padding: 18px calc(5px + 12vw);
 }
 .nav-header label:before {
     content: '';
     position: absolute;
     z-index: 5;
     top: 40%;
-    right: 30%;
+    right: calc(50% - ((299px / 2) - 15px));
     width: 16px;
     height: 16px;
     background: url(../img/search.png);
 }
+.nav-header__person {
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+}
 .nav-header-person__main {
-    padding: 0 55px 0 18px;
+    padding: 0 10px 0 18px;
+    position: relative;
+
+    h5 {
+        @include gradientText;
+
+        &::first-letter {
+            text-transform: lowercase;
+        }
+    }
 }
-.nav-header-person__main > h5 {
-    @include gradientText;
-}
-.nav-header-person__main > h5::first-letter {
-    text-transform: lowercase;
+.hamburger {
+    position: relative;
+    width: 4px;
+    height: 4px;
+    margin: 0 15px;
+    background: $textColor;
+    border-radius: 50%;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -6px;
+        left: 0;
+        width: 4px;
+        height: 4px;
+        background: $textColor;
+        border-radius: 50%;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 4px;
+        height: 4px;
+        background: $textColor;
+        border-radius: 50%;
+    }
 }
 /* Bottom part of header: stactics
 ============================================================*/
 .stactics {
     display: flex; 
-    justify-content: space-around;  
+    justify-content: space-between;  
     align-items: center; 
+    padding: 0 35px 0 45px;
+}
+.stactics-box {
+    display: flex; 
+    flex: 1 0 auto;
+    justify-content: space-between;
+    width: 150px;
+    overflow-x: auto;
 }
 .stactics__item {
-    padding: 20px 0 22px;
+    min-width: 120px;
+    padding: 20px 10px 22px;
     text-align: left;
 }
 .stactics__item > h4 {
@@ -150,7 +209,7 @@ header {
     @include changes;
 }
 .stactics__btn button {
-    padding: 20px 20px 22px 0;
+    padding: 20px 20px;
     cursor: pointer;
     @include small-title;
     @include gradientText;

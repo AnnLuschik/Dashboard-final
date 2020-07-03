@@ -1,0 +1,32 @@
+@media screen and (max-width: 1250px) {
+
+    // .person-right-sidebar a {
+    //     display: none;
+    // }
+
+    .nav-header {
+        flex-wrap: wrap-reverse;
+
+        .nav-header__person {
+            margin-left: 10%;
+            flex-basis: 20%;
+            justify-content: start;   
+        }
+
+        nav label {
+            flex-basis: 100%;
+            order: 7;
+            padding: 0;
+
+            &:before {
+                right: 3%;
+            }
+            
+            input {
+                width: 100%;
+                height: 50px;
+            }
+        }
+    }
+
+}

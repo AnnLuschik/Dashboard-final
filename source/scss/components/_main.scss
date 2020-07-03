@@ -2,6 +2,7 @@
 =======================================================*/
 main {
     display: flex;
+    
     flex-flow: wrap row;
     justify-content: space-around;
     padding: 10px;
@@ -19,27 +20,40 @@ main {
 }
 .holder__box {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1 1 30%;
 }
 .holder-box__final {
     display: flex;
-    flex-flow: row wrap;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
 }
+.break {
+    flex-basis: 100%;
+    height: 0;
+  }
 /*Monthly Revenue Progress
 =======================================================*/
 .monthly-progress {
     display: flex;
-    flex: 1 0;
+    flex: 1 0 68%;
     flex-direction: column;
 }
 .monthly-progress__title {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 35px;
+    flex-wrap: wrap;
+    justify-content: space-between;    
 }
+.title__main {
+    display: flex;
+    flex: 1 0 200px;
+    margin-bottom: 35px;
+}   
 .title__period {
     display: flex;
-    margin-right: 57px;
+    justify-content: space-around;
+    flex: 1 0 auto;
+    margin: 0 20px 35px 0;
     @include changes;
 }
 input[type="radio"] {
@@ -67,6 +81,9 @@ input[type="radio"]:checked + label {
     display: flex;
     flex-direction: column;
     padding-top: 10px;
+    flex: 1 0 auto;
+    overflow-x: auto;
+    width: 300px;
 }
 .chart__main {
     position: relative;
@@ -166,7 +183,7 @@ input[type="radio"]:checked + label {
 .hour-revenue {
     display: flex;
     flex-direction: column;
-    flex: 1 0;  
+    flex: 1 0 25%;  
     align-items: center;
     justify-content: space-between;
 }
@@ -224,7 +241,7 @@ input[type="radio"]:checked + label {
 .feed {
     display: flex;
     flex-direction: column;
-    flex: 1 0;
+    flex: 1 0 23%;
 }
 .feed h2 {
     margin-bottom: 38px;
@@ -232,6 +249,8 @@ input[type="radio"]:checked + label {
 .feed-box__list {                           /*Первый уровень списка*/
     display: flex;
     flex-direction: column;
+    height: 470px;
+    overflow-y: auto;
 }
 .feed-box__item {
     display: flex;
@@ -247,8 +266,12 @@ input[type="radio"]:checked + label {
     position: relative;
     margin-left: 90px;
 }
-.feed-box-item__msg:not(:last-of-type) {
-    margin-bottom: 18px;    
+.feed-box-item__msg {
+    background: $additionalBcg;
+
+    &:not(:last-of-type) {
+        margin-bottom: 18px;   
+    } 
 }
 .feed-box__item ul:before {                 
     content: ''; 
@@ -263,6 +286,10 @@ input[type="radio"]:checked + label {
     display: flex;
     justify-content: flex-start;
     margin-bottom: 18px;
+
+    p {
+        background: $additionalBcg;
+    }
 }
 .feed-box-item__main-msg figure {
     margin-right: 20px;    
@@ -297,7 +324,7 @@ input[type="radio"]:checked + label {
 =======================================================*/
 .task {
     display: flex;
-    // flex: 1 100%;
+    flex: 1 1 50%;
     flex-direction: column;
 }
 .task h2 {
@@ -305,6 +332,7 @@ input[type="radio"]:checked + label {
 }
 .task__list {
     display: flex;
+    flex: 1 0 auto;
     flex-direction: column;
 }
 .task-list__item {
@@ -313,9 +341,14 @@ input[type="radio"]:checked + label {
     align-items: center;
     padding: 15px 0;
     border-top: 1px solid $borderColor;
-}
-.task-list__item:last-of-type {
-    border-bottom: 1px solid $borderColor;
+
+    &:last-of-type {
+        border-bottom: 1px solid $borderColor;
+    }
+
+    &:nth-child(2n) {
+        background: $additionalBcg;
+    }
 }
 .task-item__check input[type="checkbox"] {
     visibility: hidden;
@@ -357,6 +390,7 @@ input[type="radio"]:checked + label {
 }
 .task-list__item p {
     @include standart-text;
+    overflow: hidden;
 }
 .task-list__item time {
     position: relative;
@@ -381,6 +415,7 @@ input[type="radio"]:checked + label {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1 0 180px;
 }
 .progress > h2{
     margin: 0 62px 28px 62px;
@@ -416,6 +451,7 @@ input[type="radio"]:checked + label {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    flex: 1 0 180px;
 }
 .shipment > h2 {
     margin-bottom: 24px;

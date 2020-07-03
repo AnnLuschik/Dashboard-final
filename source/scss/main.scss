@@ -7,16 +7,19 @@
 @import "./global/media";
 
 /*---------------Common styles------------------------*/
-.wrapper {
-    display: flex;
+body {
     max-width: 1366px;
     margin: 0 auto;
+}
+.wrapper {
+    display: flex;
+    width: 100%;
     font-family: 'Lato', sans-serif;
     background-color: $bcg;
 }
 .container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     flex-grow: 1;
 }
 .holder {
@@ -42,6 +45,7 @@ section {
 .person {
     display: flex;
     align-items: center;
+    // justify-content: space-between;
 }
 // .person-avatar img {
 //     height: 100%;    
@@ -302,3 +306,6 @@ h5 {
 #vk {
     @include gradient (135deg, #FAD488, #F59083);
 }
+// aside {
+//     display: none !important;
+// }

@@ -1,16 +1,17 @@
 /*------Font sizes----------*/
-$hugeFont : 30px;                       /*Логотип*/
-$big-numberFont : 25px;
-$numberFont : 20px;
-$titleFont : 14px;                         /*Заголовки секций*/
-$nameFont : 13px;
-$mediumFont : 12px;                         /*Основной текст, заголовки в .stactics*/
-$smallFont : 10px;
-$tinyFont : 8px;
+$hugeFont : 30px;                       /*Логотип, 30px*/
+$big-numberFont : 25px;                 /*25*/    
+$numberFont : 20px;                     /*20*/
+$titleFont : 14px;                         /*Заголовки секций, 14*/
+$nameFont : 13px;                       /*13*/
+$mediumFont : 12px;                         /*Основной текст, заголовки в .stactics, 12*/
+$smallFont : 10px;                      /*10*/
+$tinyFont : 8px;                        /*8*/
 
 /*---------Colors------------*/
 $bcg : #F0F0F0;
 $sectionBcg: #FFFFFF;
+$additionalBcg: #FCFCFC;
 $borderColor: #F1F1F1;
 $borderShadowColor : #EDEDED;
 
@@ -32,7 +33,3 @@ $messageTimeColor: #979796;
 
 $triangleIncrease: #A889E9;
 $triangleDecrease: #FD5670;
-
-
-$maxwidth: 1366px;
-
