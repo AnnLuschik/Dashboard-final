@@ -1,32 +1,108 @@
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1226px) {
 
-    // .person-right-sidebar a {
-    //     display: none;
-    // }
+    .nav-sidebar {
+        flex-direction: row;
+        flex: 1 0 100%;
+        justify-content: space-between;
+
+        .nav-sidebar__logo {
+            width: 100px;
+            height: 100%;
+        }
+
+        nav {
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-between;
+            padding: 15px 50px;
+            align-items: center;
+            @include gradient (to right);
+
+            a {
+                position: relative;
+                margin: 0;
+
+                &:last-child {
+                    margin: 0;
+                }
+
+                &:hover:not(:last-of-type):before {
+                    z-index: 25;
+                    top: 60px;
+                    left: 35%;
+                    border: 8px solid transparent;
+                    border-top: 8px solid #FC725E;
+                }
+            }
+        }
+    }
 
     .nav-header {
         flex-wrap: wrap-reverse;
+        justify-content: space-between;
 
         .nav-header__person {
-            margin-left: 10%;
-            flex-basis: 20%;
-            justify-content: start;   
+            margin-left: auto;
+            width: 300px;  
         }
 
-        nav label {
+        label {
             flex-basis: 100%;
-            order: 7;
+            order: 4;
             padding: 0;
-
+            
             &:before {
                 right: 3%;
             }
             
             input {
                 width: 100%;
-                height: 50px;
+                height: 70px;
+                border-radius: 0;
+                font-size: 16px;
             }
         }
     }
+    .right-sidebar__content {
+        height: 100%;
+    }
+}
 
+@media screen and (max-width: 710px) {
+    // h2 {
+    //     font-size: 18px;
+    // }
+    .nav-sidebar {
+        a {
+            // position: relative;
+            &:hover:not(:last-of-type):before {
+                top: 45px;
+            }
+
+            p {
+            display: none;
+            }
+        }
+    }
+    .nav-header__person {
+        margin-left: 0 !important;
+    }
+    .holder {
+        flex-direction: column;
+    }
+    // main {
+    //     display: none;
+    // }
+    .right-sidebar {
+        width: 100%;
+        // display: none;                                                                        /*!!!!!!!!!!!!!!!!!*/  
+    }
+    .right-sidebar__content {
+        display: none;
+    }
+    .right-sidebar__companies ul {
+       padding: 0;
+       flex-wrap: wrap;
+    //    width: 50%;
+    }
 }

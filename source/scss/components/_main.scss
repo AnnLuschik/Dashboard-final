@@ -2,7 +2,7 @@
 =======================================================*/
 main {
     display: flex;
-    
+    // flex: 1000 0 100px;
     flex-flow: wrap row;
     justify-content: space-around;
     padding: 10px;
@@ -196,7 +196,7 @@ input[type="radio"]:checked + label {
     height: 124px;
     margin: 0 39px 32px;
     border-radius: 50%;
-   @include gradient (135deg, $gradientPieChartStart, $gradientPieChartEnd);
+    background: $borderShadowColor url(../img/main/circle-percentage.png) no-repeat center / cover;
 }
 .pie-chart span {
     position: absolute;
@@ -378,15 +378,18 @@ input[type="radio"]:checked + label {
     @include gradient;  
     border: none;  
 }
-.task-item__check input[type="checkbox"]:checked:before ~ span {  /*не работает*/
+.task-item__check input[type="checkbox"]:checked ~ span:before {
     content: '';
     position: absolute;
-    top: 0;
-    left: -28px;
+    top: calc(50% - 3px);
+    left: calc(50% - 4px);
     z-index: 10;
-    width: 4px;
-    height: 10px;
-    background:yellow;
+    width: 8px;
+    height: 5px;
+    background: transparent;  
+    border-left: 2px solid $sectionBcg;
+    border-bottom: 2px solid $sectionBcg;
+    transform: rotate(-45deg);
 }
 .task-list__item p {
     @include standart-text;

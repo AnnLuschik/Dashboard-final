@@ -9,31 +9,28 @@ header {
 ============================================================*/
 .nav-header {
     display: flex;
-    flex-wrap: wrap-reverse;
+    // flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid $borderColor;
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        height: 100%;
-    }
+}
+.nav__box {
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 .nav-header__icon {
     position: relative;
     height: 100%;
     padding: 0 18px; 
     border: none;
-    border-right: 1px solid $borderColor;
+    border-left: 1px solid $borderColor;
 
     img {
         margin: 27px 0;
     }
 
-    &:not(:first-child):before {
+    &:before {
         content: '';
         position: absolute;
         width: 50%;
@@ -42,13 +39,13 @@ header {
         mix-blend-mode: screen;
     }
 
-    &:first-child {
-        padding-left: 0;
-        border-left: 1px solid $borderColor;
-    }
+    // &:first-child {
+    //     padding-left: 0;
+    //     border-left: 1px solid $borderColor;
+    // }
 
     &:last-child {
-        border: none;
+        border-right: 1px solid $borderColor;
     }
     
     &:last-child:after {
@@ -110,7 +107,7 @@ header {
     text-transform: capitalize;
     background: $searchColor;
     border: 1px solid $borderColor;
-    border-radius: 20px;
+    border-radius: 1.4vw;
     @include placeholder;
 }
 .nav-header label {
@@ -129,7 +126,6 @@ header {
 }
 .nav-header__person {
     display: flex;
-    flex: 1;
     justify-content: space-around;
 }
 .nav-header-person__main {

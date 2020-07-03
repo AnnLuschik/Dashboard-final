@@ -3,7 +3,8 @@
 @import "./global/normalize";
 @import "./components/header";
 @import "./components/main";
-@import "./global/media";
+@import "./components/nav";
+@import "./components/aside";
 
 /*---------------Common styles------------------------*/
 body {
@@ -12,6 +13,7 @@ body {
 }
 .wrapper {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     font-family: 'Lato', sans-serif;
     background-color: $bcg;
@@ -19,7 +21,7 @@ body {
 .container {
     display: flex;
     flex-wrap: wrap;
-    flex-grow: 1;
+    flex: 1 1 100px;
 }
 .holder {
     display: flex;
@@ -44,11 +46,7 @@ section {
 .person {
     display: flex;
     align-items: center;
-    // justify-content: space-between;
 }
-// .person-avatar img {
-//     height: 100%;    
-// }
 .person-main {
     display: flex;
     flex-direction: column;
@@ -85,226 +83,5 @@ h5 {
     font-weight: 700;
     font-size: $nameFont;
 }
-/*Navigation aside
-============================================================*/
-.nav-sidebar {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    // flex: 0 0;
-    justify-content: flex-start;
-    align-items: center;
-    @include gradient (to bottom);
 
-    // &:before {
-    //     content: '';
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     height: 100%;
-    //     box-shadow: 87px 0 6px 3px $borderShadowColor;
-    // }
-}
-.nav-sidebar__logo {
-    padding: 20px 0;
-    background: $sectionBcg;
-    width: 100%;
-    a {
-        display: flex;
-        justify-content: center;
-    }
-}
-.nav-sidebar nav {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 0 15px;
-
-    a {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 30px;
-        color: $sectionBcg;
-
-        &:first-child {
-            padding-top: 30px;
-            
-        }
-        &:last-child {
-            margin-top: auto;
-        }
-        &:hover {
-           position: relative;
-        }
-
-        &:hover:not(:last-of-type):before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: calc(100% + 15px);
-            // width: 6px;
-            // height: 6px;
-            border: 8px solid transparent;
-            border-left: 6px solid #FC725E;
-        }
-
-        img {
-            margin-bottom: 8px;
-        }
-    }
-} 
-
-/*Right sidebar
-===============================================================*/
-.right-sidebar {
-    display: flex;
-    flex-direction: column;
-    // flex: 0 0 20%;
-    background-color: $sectionBcg;
-}
-.right-sidebar nav {
-    display: flex;
-    @include gradient;
-}
-.right-sidebar__btn {
-    position: relative;
-    padding: 13px 32px;
-    cursor: pointer;
-}
-.right-sidebar__btn:hover {
-    background-color: #C54357; 
-}
-.right-sidebar__btn:hover:before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 45%;
-    width: 12px;
-    height: 12px;
-    border: 6px solid transparent;
-    border-top: 6px solid #C54357;
-}
-.right-sidebar__content {
-    padding: 0 18px;
-}
-.person-right-sidebar {
-    display: flex;
-    justify-content: space-between;
-}
-.person-right-sidebar__box {
-    display: flex;
-    justify-content: flex-start;
-}
-.right-sidebar__content ul li {
-
-    &:not(:last-child) {
-        padding: 20px 0 22px;
-        border-bottom: 1px solid $borderColor;
-    }
-    &:last-child {
-        padding: 19px 0 34px;
-    }
-    &:first-child {
-        padding: 24px 0 20px;
-    }
-}
-.person-right-sidebar a {
-    width: 20px;
-    height: 16px;
-    background: $textColor;
-    background-clip: content-box;
-    mask: url(../img/aside/chat.png);        
-}
-.right-sidebar-person__main {
-    padding: 0 0 0 16px;
-}
-.right-sidebar-person__main h5 {
-    color: $titleColor;   
-}
-.right-sidebar-person__avatar img {
-    width: 42px;
-    height: 42px;
-    object-fit: none;
-    object-position: center 25%;
-}
-.right-sidebar__search {
-    position: relative;
-}
-.right-sidebar__search input {
-    width: 100%;
-    padding: 16px 80px 20px 15px;
-    font-size: $smallFont;
-    color: $searchTextColor;
-    @include placeholder;
-    border: 1px solid $borderColor;
-    border-left: none;
-    border-right: none;
-}
-.right-sidebar__search:before {
-    content: '';
-    position: absolute;
-    z-index: 500;
-    top: 30%;
-    right: 20%;
-    width: 19px;
-    height: 19px;
-    background: url(../../source/img/search.png) no-repeat center / contain;
-}
-.right-sidebar__search:after {
-    content: '';
-    position: absolute;
-    z-index: 500;
-    top: 30%;
-    right: 10%;
-    width: 19px;
-    height: 19px;
-    background: url(../../source/img/aside/edit.png) no-repeat center / contain;
-}
-.right-sidebar__companies {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 30px 18px;
-}
-.right-sidebar__companies h2 {
-    padding-bottom: 30px;
-}
-.right-sidebar__companies ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0 15px;
-}
-.right-sidebar__companies ul li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 54px;
-    height: 54px;
-    margin-bottom: 10px;
-    background-color: #C54357;
-    border-radius: 30%;
-}
-#rdio {
-    @include gradient (135deg, #B26EE0, #6B5BB4)
-}
-#css {
-    @include gradient (135deg, #57E6C7, #4CBCC3);
-}
-#deviantart {
-    @include gradient (135deg, #F0B094, #B4717A);
-}
-#xing {
-    @include gradient (135deg, #798DE4, #894BB4);
-}
-#vimeo {
-    @include gradient (135deg, #48D1E0, #528FE6);
-}
-#vk {
-    @include gradient (135deg, #FAD488, #F59083);
-}
-// aside {
-//     display: none !important;
-// }
+@import "./global/media";
