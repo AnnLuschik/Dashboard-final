@@ -123,11 +123,7 @@ header {
   mix-blend-mode: screen;
 }
 
-.nav-header__icon:last-child {
-  border-right: 1px solid #F1F1F1;
-}
-
-.nav-header__icon:last-child:after {
+.nav-header__icon:last-of-type:after {
   content: '';
   position: absolute;
   top: 20px;
@@ -1187,8 +1183,7 @@ input[type="radio"]:checked + label {
   display: none;
   width: 40px;
   height: 2px;
-  background: -webkit-gradient(linear, right top, left top, from(#FC755B), to(#FD5272));
-  background: linear-gradient(to left, #FC755B, #FD5272);
+  background: #FFFFFF;
 }
 
 .burger::before {
@@ -1198,8 +1193,7 @@ input[type="radio"]:checked + label {
   left: 0;
   width: 40px;
   height: 2.5px;
-  background: -webkit-gradient(linear, right top, left top, from(#FC755B), to(#FD5272));
-  background: linear-gradient(to left, #FC755B, #FD5272);
+  background: #FFFFFF;
 }
 
 .burger::after {
@@ -1209,8 +1203,7 @@ input[type="radio"]:checked + label {
   left: 0;
   width: 40px;
   height: 2.5px;
-  background: -webkit-gradient(linear, right top, left top, from(#FC755B), to(#FD5272));
-  background: linear-gradient(to left, #FC755B, #FD5272);
+  background: #FFFFFF;
 }
 
 .nav-sidebar__logo {
@@ -1781,12 +1774,16 @@ h5 {
   }
 }
 
+
 @media screen and (max-width: 460px) {
+  .nav-sidebar nav {
+      display: none;
+  }
   .nav-sidebar nav a {
-    display: none;
+      display: none;
   }
   .burger {
-    display: block;
+      display: block;
   }
 }
 /*# sourceMappingURL=main.css.map */
