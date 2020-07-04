@@ -92,9 +92,9 @@
 .right-sidebar__search:before {
     content: '';
     position: absolute;
-    z-index: 500;
     top: 30%;
     right: 20%;
+    z-index: 500;
     width: 19px;
     height: 19px;
     background: url(../../source/img/search.png) no-repeat center / contain;
@@ -102,9 +102,9 @@
 .right-sidebar__search:after {
     content: '';
     position: absolute;
-    z-index: 500;
     top: 30%;
     right: 10%;
+    z-index: 500;
     width: 19px;
     height: 19px;
     background: url(../../source/img/aside/edit.png) no-repeat center / contain;
@@ -153,6 +153,3 @@
 #vk {
     @include gradient (135deg, #FAD488, #F59083);
 }
-// aside {
-//     display: none !important;
-// }
