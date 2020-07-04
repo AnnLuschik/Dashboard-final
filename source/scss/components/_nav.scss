@@ -8,43 +8,35 @@
     align-items: center;
     width: 70px;
     @include gradient (to bottom);
-
-    // &:before {
-    //     content: '';
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     height: 100%;
-    //     box-shadow: 87px 0 6px 3px $borderShadowColor;
-    // }
+    box-shadow: 6px 0 8px $borderShadowColor;
 }
-// .burger {
-//     position: relative;
-//     display: none;
-//     width: 40px;
-//     height: 2px;
-//     @include gradient;
+.burger {
+    position: relative;
+    display: none;
+    width: 40px;
+    height: 2px;
+    background: &sectionBcg;
 
-//     &::before {
-//         content: '';
-//         position: absolute;
-//         top: -6px;
-//         left: 0;
-//         width: 40px;
-//         height: 2.5px;
-//         @include gradient;
-//     }
+    &::before {
+        content: '';
+        position: absolute;
+        top: -6px;
+        left: 0;
+        width: 40px;
+        height: 2.5px;
+        background: &sectionBcg;
+    }
 
-//     &::after {
-//         content: '';
-//         position: absolute;
-//         top: 6px;
-//         left: 0;
-//         width: 40px;
-//         height: 2.5px;
-//         @include gradient;
-//     }
-// }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 40px;
+        height: 2.5px;
+        background: &sectionBcg;
+    }
+}
 .nav-sidebar__logo {
     padding: 20px 0;
     background: $sectionBcg;

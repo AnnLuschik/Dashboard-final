@@ -2,7 +2,6 @@
 =======================================================*/
 main {
     display: flex;
-    // flex: 1000 0 100px;
     flex-flow: wrap row;
     justify-content: space-around;
     padding: 10px;
@@ -21,22 +20,18 @@ main {
 .holder__box {
     display: flex;
     flex-wrap: wrap;
-    flex: 1 1 30%;
+    flex: 1 1 520px;
 }
 .holder-box__final {
     display: flex;
     flex: 1 1 auto;
     flex-wrap: wrap;
 }
-.break {
-    flex-basis: 100%;
-    height: 0;
-  }
 /*Monthly Revenue Progress
 =======================================================*/
 .monthly-progress {
     display: flex;
-    flex: 1 0 68%;
+    flex: 1000 1 550px;
     flex-direction: column;
 }
 .monthly-progress__title {
@@ -183,7 +178,7 @@ input[type="radio"]:checked + label {
 .hour-revenue {
     display: flex;
     flex-direction: column;
-    flex: 1 0 25%;  
+    flex: 1 0 auto;  
     align-items: center;
     justify-content: space-between;
 }
@@ -241,7 +236,7 @@ input[type="radio"]:checked + label {
 .feed {
     display: flex;
     flex-direction: column;
-    flex: 1 0 23%;
+    flex: 1000 1 350px;
 }
 .feed h2 {
     margin-bottom: 38px;
@@ -324,7 +319,7 @@ input[type="radio"]:checked + label {
 =======================================================*/
 .task {
     display: flex;
-    flex: 1 1 50%;
+    flex: 1 0 calc(100% - 20px);
     flex-direction: column;
 }
 .task h2 {
@@ -423,7 +418,7 @@ input[type="radio"]:checked + label {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1 0 180px;
+    flex: 1 0 auto;
 }
 .progress > h2{
     margin: 0 62px 28px 62px;
@@ -488,7 +483,7 @@ input[type="radio"]:checked + label {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    flex: 1 0 180px;
+    flex: 1 0 auto;
 }
 .shipment > h2 {
     margin-bottom: 24px;

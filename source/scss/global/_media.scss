@@ -112,3 +112,15 @@
     //    width: 50%;
     }
 }
+
+@media screen and (max-width: 460px) {
+    .nav-sidebar nav {
+        display: none;
+    }
+    .nav-sidebar nav a {
+        display: none;
+    }
+    .burger {
+        display: block;
+    }
+}
