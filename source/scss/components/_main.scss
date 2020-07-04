@@ -402,6 +402,11 @@ input[type="radio"]:checked + label {
     color: $taskTimeColor;
     text-align: left;
 }
+.task-item__time {
+    display: flex;
+    flex-basis: 60px;
+    justify-content: flex-start;
+}
 .task-item__time time:before {
     content: '';
     position: absolute;

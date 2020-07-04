@@ -87,6 +87,7 @@
     border: 1px solid $borderColor;
     border-left: none;
     border-right: none;
+    text-transform: capitalize;
 }
 .right-sidebar__search:before {
     content: '';

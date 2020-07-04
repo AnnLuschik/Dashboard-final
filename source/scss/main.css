@@ -983,6 +983,17 @@ input[type="radio"]:checked + label {
   text-align: left;
 }
 
+.task-item__time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 60px;
+      flex-basis: 60px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
 .task-item__time time:before {
   content: '';
   position: absolute;
@@ -1366,6 +1377,7 @@ input[type="radio"]:checked + label {
   border: 1px solid #F1F1F1;
   border-left: none;
   border-right: none;
+  text-transform: capitalize;
 }
 
 .right-sidebar__search input::-webkit-input-placeholder {
