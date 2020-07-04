@@ -7,21 +7,15 @@ header {
 
 /* Top part of header: navigation
 ============================================================*/
-.nav-header {
+.nav__box {
     display: flex;
-    // flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid $borderColor;
 }
-.nav__box {
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
 .nav-header__icon {
     position: relative;
-    height: 100%;
+    align-items: center;
+    height: 75px;
     padding: 0 18px; 
     border: none;
     border-left: 1px solid $borderColor;
@@ -110,11 +104,11 @@ header {
     border-radius: 1.4vw;
     @include placeholder;
 }
-.nav-header label {
+.nav__box label {
     position: relative;
     padding: 18px calc(5px + 12vw);
 }
-.nav-header label:before {
+.nav__box label:before {
     content: '';
     position: absolute;
     z-index: 5;

@@ -37,9 +37,14 @@
         }
     }
 
-    .nav-header {
+    .nav__box {
         flex-wrap: wrap-reverse;
         justify-content: space-between;
+
+        .nav-header__icon {
+            border: none;
+            margin: 0 10px;
+        }
 
         .nav-header__person {
             margin-left: auto;
