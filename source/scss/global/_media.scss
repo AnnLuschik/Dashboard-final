@@ -74,9 +74,7 @@
 }
 
 @media screen and (max-width: 710px) {
-    // h2 {
-    //     font-size: 18px;
-    // }
+
     .nav-sidebar {
         nav a {
             position: relative;
@@ -100,8 +98,7 @@
         flex-direction: column;
     }
     .right-sidebar {
-        width: 100%;
-        // display: none;                                                                        /*!!!!!!!!!!!!!!!!!*/  
+        width: 100%;                                                      
     }
     .right-sidebar__content {
         display: none;
@@ -109,7 +106,9 @@
     .right-sidebar__companies ul {
        padding: 0;
        flex-wrap: wrap;
-    //    width: 50%;
+    }
+    .monthly-progress__title .hamburger {
+        display: none;
     }
 }
 
