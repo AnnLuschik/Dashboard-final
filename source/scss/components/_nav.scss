@@ -50,7 +50,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 50px 15px 20px;
+    padding: 20px 15px;
 
     a {
         position: relative;
@@ -58,6 +58,7 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: 30px;
+        padding-top: 30px;
         color: $sectionBcg;
 
         &:last-child {
@@ -68,7 +69,7 @@
             content: '';
             position: absolute;
             top: 50%;
-            left: calc(100% + 6px);
+            left: calc(100% + 17px);
             border: 8px solid transparent;
             border-left: 6px solid #FC725E;
         }
@@ -80,3 +81,29 @@
         }
     }
 } 
+#home {
+    background: url(../img/nav-aside/home.png) no-repeat center;
+}
+  
+#stactics {
+    background: url(../img/nav-aside/bar-chart.png) no-repeat center;
+}
+  
+#users {
+    background: url(../img/nav-aside/user.png) no-repeat center;
+}
+  
+#settings {
+    background: url(../img/nav-aside/settings.png) no-repeat center;
+}
+  
+#quires {
+    background: url(../img/nav-aside/information.png) no-repeat center;
+}
+  
+#logout {
+    align-self: flex-end;
+    width: 30px;
+    margin-bottom: 10px;
+    background: url(../img/nav-aside/power-button.png) no-repeat center;
+}
