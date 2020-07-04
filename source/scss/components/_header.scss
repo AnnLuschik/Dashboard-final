@@ -33,16 +33,11 @@ header {
         mix-blend-mode: screen;
     }
 
-    // &:first-child {
-    //     padding-left: 0;
-    //     border-left: 1px solid $borderColor;
-    // }
-
     &:last-child {
         border-right: 1px solid $borderColor;
     }
     
-    &:last-child:after {
+    &:last-of-type {
         content: '';
         position: absolute;  
         top: 20px;

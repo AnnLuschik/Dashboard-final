@@ -113,6 +113,23 @@
 }
 
 @media screen and (max-width: 460px) {
+    main {
+      padding: 10px 0;
+    }
+  
+    .chart__holder {
+      width: 200px;
+    }
+  
+    .inner,
+    .inner--narrow {
+      margin: 10px 0;
+    }
+  
+    .nav-sidebar {
+      padding-right: 20px;
+    }
+  
     .nav-sidebar nav {
         display: none;
     }
@@ -122,4 +139,18 @@
     .burger {
         display: block;
     }
-}
+  }
+  
+  @media screen and (max-width: 415px) {
+    .inner,
+    .inner--narrow {
+      padding: 20px;
+    }  
+    .task-item__time time:before {
+      display: none;
+    }
+  
+    .right-sidebar__companies ul  {
+      width: 200px;
+    }
+  }
