@@ -488,8 +488,23 @@ input[type="radio"]:checked + label {
 .shipment > h2 {
     margin-bottom: 24px;
 }
-.shipment__map img {
+.shipment__map {
+    position: relative;
+    width: 187px;
+    height: 115px;
+    background: url(../img/main/map.png) no-repeat center / cover;
     margin-bottom: 15px;
+}
+
+.shipment__marker {
+    position: absolute;
+    top: var(--top);
+    left: var(--left);
+    width: 15px;
+    height: 21px;
+    @include gradient;
+    background-clip: content-box;
+    mask: url(../img/main/placeholder.png);
 }
 .shipment__value {
     display: flex;
