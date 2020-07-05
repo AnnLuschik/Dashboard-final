@@ -141,7 +141,7 @@
     }
   }
   
-  @media screen and (max-width: 415px) {
+@media screen and (max-width: 415px) {
     .inner,
     .inner--narrow {
       padding: 20px;
@@ -153,4 +153,8 @@
     .right-sidebar__companies ul  {
       width: 200px;
     }
-  }
+
+    .nav-header__icon div {
+        padding: 0 14px;
+    }  
+}
