@@ -301,9 +301,11 @@ input[type="radio"]:checked + label {
     color: $messageTimeColor;   
 }
 .feed-box-item__text {
-    @include standart-text;
+    max-height: 380px;
     padding: 20px 22px 18px 21px;
+    @include standart-text;
     border: 1px solid $borderColor;
+    overflow: hidden;
 }
 .feed-box-item__text--narrow {
     @include standart-text;
@@ -392,7 +394,6 @@ input[type="radio"]:checked + label {
 }
 .task-list__item p {
     @include standart-text;
-    overflow: hidden;
 }
 .task-list__item time {
     position: relative;
