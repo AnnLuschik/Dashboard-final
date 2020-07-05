@@ -305,7 +305,7 @@ input[type="radio"]:checked + label {
     padding: 20px 22px 18px 21px;
     @include standart-text;
     border: 1px solid $borderColor;
-    overflow: scroll;
+    overflow: auto;
 }
 .feed-box-item__text--narrow {
     @include standart-text;
