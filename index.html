@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link href="https://allfont.ru/allfont.css?fonts=deftone-stylus" rel="stylesheet"/>
-    <link rel="stylesheet" href="./source/scss/main.css">
+    <link rel="stylesheet" href="./dist/style/style.css">
     <title>Final dashboard</title>
 </head>
 <body>
@@ -36,7 +36,7 @@
                         <a class="nav-header__icon" href="#"><div class="icon-letter"></div></a>
                         <a class="nav-header__icon" href="#"><div class="icon-earth"></div></a>
                         <div class="person nav-header__person">
-                            <div><img src="./source/img/header/avatar.jpeg" alt="Kendall Jenner"></div>
+                            <div><img src="./dist/img/avatar.jpg" alt="Kendall Jenner"></div>
                             <div class="person-main nav-header-person__main">
                                 <h5>Kendall Jenner</h5>
                                 <p>Cheif authority</p>
@@ -282,7 +282,7 @@
                                 <li class="feed-box__item">
                                     <div class="feed-box-item__main-msg">
                                         <figure>
-                                            <img src="./source/img/main/sophie-turner.jpeg" alt="Sophie Turner photo">
+                                            <img src="./dist/img/sophie-turner.jpg" alt="Sophie Turner photo">
                                             <figcaption>10 min ago</figcaption>
                                         </figure>
                                         <p class="feed-box-item__text"><span>Sophie Turner</span> is simply dummy text of the printing and 
@@ -305,7 +305,7 @@
                                 <li class="feed-box__item">
                                     <div class="feed-box-item__main-msg">
                                         <figure>
-                                            <img src="./source/img/main/peter-quill.jpeg" alt="Peter Quill photo">
+                                            <img src="./dist/img/peter-quill.jpg" alt="Peter Quill photo">
                                             <figcaption>15 min ago</figcaption>
                                         </figure>
                                         <p class="feed-box-item__text"><span>Peter Quill</span> is simply dummy text of the printing and 
@@ -440,9 +440,9 @@
         
                 <aside class="right-sidebar">
                     <nav>
-                        <button class="right-sidebar__btn"><img src="./source/img/aside/users.png" alt="Users icon"></button>
-                        <button class="right-sidebar__btn"><img src="./source/img/aside/chat.png" alt="Messages icon"></button>
-                        <button class="right-sidebar__btn"><img src="./source/img/aside/like.png" alt="Like icon"></button>
+                        <button class="right-sidebar__btn right-sidebar__btn--user"></button>
+                        <button class="right-sidebar__btn right-sidebar__btn--chat"></button>
+                        <button class="right-sidebar__btn right-sidebar__btn--like"></button>
                     </nav>
                     <div class="right-sidebar__content">
                         <ul>
@@ -450,7 +450,7 @@
                                 <div class="person person-right-sidebar">
                                     <div class="person-right-sidebar__box">
                                         <div class="person-avatar right-sidebar-person__avatar">
-                                            <img src="./source/img/aside/avatars/jennifer-lawrence.jpeg" alt="Userpic">
+                                            <img src="./dist/img/jennifer-lawrence.jpg" alt="Jennifer Lawrence">
                                         </div>
                                         <div class="person-main right-sidebar-person__main">
                                             <h5>Jennifer Lawrence</h5>
@@ -464,7 +464,7 @@
                                 <div class="person person-right-sidebar">
                                     <div class="person-right-sidebar__box">
                                         <div class="person-avatar right-sidebar-person__avatar">
-                                            <img src="./source/img/aside/avatars/brad-pitt.jpeg" alt="Userpic">
+                                            <img src="./dist/img/brad-pitt.jpg" alt="Brad Pitt">
                                         </div>
                                         <div class="person-main right-sidebar-person__main">
                                             <h5>Brad Pitt</h5>
@@ -478,7 +478,7 @@
                                 <div class="person person-right-sidebar">
                                     <div class="person-right-sidebar__box">
                                         <div class="person-avatar right-sidebar-person__avatar">
-                                            <img src="./source/img/aside/avatars/leonardo-dicaprio.jpeg" alt="Userpic">
+                                            <img src="./dist/img/leonardo-dicaprio.jpg" alt="Leonardo Dicaprio">
                                         </div>
                                         <div class="person-main right-sidebar-person__main">
                                             <h5>Leonardo Dicaprio</h5>
@@ -492,7 +492,7 @@
                                 <div class="person person-right-sidebar">
                                     <div class="person-right-sidebar__box">
                                         <div class="person-avatar right-sidebar-person__avatar">
-                                            <img src="./source/img/aside/avatars/jesse-eisenberg.jpeg" alt="Userpic">
+                                            <img src="./dist/img/jesse-eisenberg.jpg" alt="Jesse Eisenberg">
                                         </div>
                                         <div class="person-main right-sidebar-person__main">
                                             <h5>Jesse Eisenberg</h5>
@@ -506,7 +506,7 @@
                                 <div class="person person-right-sidebar">
                                     <div class="person-right-sidebar__box">
                                         <div class="person-avatar right-sidebar-person__avatar">
-                                            <img src="./source/img/aside/avatars/kristen-stewart.jpeg" alt="Userpic">
+                                            <img src="./dist/img/kristen-stewart.jpg" alt="Kristen Stewart">
                                         </div>
                                         <div class="person-main right-sidebar-person__main">
                                             <h5>Kristen Stewart</h5>
@@ -520,7 +520,7 @@
                                 <div class="person person-right-sidebar">
                                     <div class="person-right-sidebar__box">
                                         <div class="person-avatar right-sidebar-person__avatar">
-                                            <img src="./source/img/aside/avatars/ben-affleck.jpeg" alt="Userpic">
+                                            <img src="./dist/img/ben-affleck.jpg" alt="Ben Affleck">
                                         </div>
                                         <div class="person-main right-sidebar-person__main">
                                             <h5>Ben Affleck</h5>
@@ -534,7 +534,7 @@
                                 <div class="person person-right-sidebar">
                                     <div class="person-right-sidebar__box">
                                         <div class="person-avatar right-sidebar-person__avatar">
-                                            <img src="./source/img/aside/avatars/ben-affleck.jpeg" alt="Userpic">
+                                            <img src="./dist/img/ben-affleck.jpg" alt="Ben Affleck">
                                         </div>
                                         <div class="person-main right-sidebar-person__main">
                                             <h5>Ben Affleck</h5>
@@ -548,7 +548,7 @@
                                 <div class="person person-right-sidebar">
                                     <div class="person-right-sidebar__box">
                                         <div class="person-avatar right-sidebar-person__avatar">
-                                            <img src="./source/img/aside/avatars/ben-affleck.jpeg" alt="Userpic">
+                                            <img src="./dist/img/ben-affleck.jpg" alt="Ben Affleck">
                                         </div>
                                         <div class="person-main right-sidebar-person__main">
                                             <h5>Ben Affleck</h5>
@@ -562,7 +562,7 @@
                                 <div class="person person-right-sidebar">
                                     <div class="person-right-sidebar__box">
                                         <div class="person-avatar right-sidebar-person__avatar">
-                                            <img src="./source/img/aside/avatars/ben-affleck.jpeg" alt="Userpic">
+                                            <img src="./dist/img/ben-affleck.jpg" alt="Ben Affleck">
                                         </div>
                                         <div class="person-main right-sidebar-person__main">
                                             <h5>Ben Affleck</h5>
@@ -576,7 +576,7 @@
                                 <div class="person person-right-sidebar">
                                     <div class="person-right-sidebar__box">
                                         <div class="person-avatar right-sidebar-person__avatar">
-                                            <img src="./source/img/aside/avatars/ben-affleck.jpeg" alt="Userpic">
+                                            <img src="./dist/img/ben-affleck.jpg" alt="Ben Affleck">
                                         </div>
                                         <div class="person-main right-sidebar-person__main">
                                             <h5>Ben Affleck</h5>
@@ -590,7 +590,7 @@
                                 <div class="person person-right-sidebar">
                                     <div class="person-right-sidebar__box">
                                         <div class="person-avatar right-sidebar-person__avatar">
-                                            <img src="./source/img/aside/avatars/ben-affleck.jpeg" alt="Userpic">
+                                            <img src="./dist/img/ben-affleck.jpg" alt="Ben Affleck">
                                         </div>
                                         <div class="person-main right-sidebar-person__main">
                                             <h5>Ben Affleck</h5>
@@ -604,7 +604,7 @@
                                 <div class="person person-right-sidebar">
                                     <div class="person-right-sidebar__box">
                                         <div class="person-avatar right-sidebar-person__avatar">
-                                            <img src="./source/img/aside/avatars/ben-affleck.jpeg" alt="Userpic">
+                                            <img src="./dist/img/ben-affleck.jpg" alt="Ben Affleck">
                                         </div>
                                         <div class="person-main right-sidebar-person__main">
                                             <h5>Ben Affleck</h5>
