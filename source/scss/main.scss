@@ -68,7 +68,7 @@ h1 {
     width: 30px;
     font-weight: 400;
     font-size: $hugeFont;
-    font-family: 'Deftone Stylus', Arial, sans-serif;
+    font-family: 'Deftone Stylus', 'Comic Sans MS', 'Monaco CY', cursive;
     @include gradientText (to bottom);
 }
 h2 {
