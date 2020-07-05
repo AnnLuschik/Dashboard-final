@@ -1663,6 +1663,7 @@ section {
 
 /*----------------Font styles-----------------------------*/
 h1 {
+  width: 30px;
   font-weight: 400;
   font-size: 30px;
   font-family: 'Deftone Stylus', Arial, sans-serif;
@@ -1723,6 +1724,10 @@ h5 {
   .nav-sidebar .nav-sidebar__logo {
     width: 100px;
     height: 100%;
+  }
+  .nav-sidebar__logo a span {
+    font-size: 30px;
+    color: #FD7858;
   }
   .nav-sidebar nav {
     -webkit-box-orient: horizontal;

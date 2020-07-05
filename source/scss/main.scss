@@ -29,7 +29,7 @@ body {
 section {
     background-color: #FFFFFF;
 }
-.increase {
+.increase {                     
     position: relative;
     @include changes;
 }
@@ -65,6 +65,7 @@ section {
 }
 /*----------------Font styles-----------------------------*/
 h1 {
+    width: 30px;
     font-weight: 400;
     font-size: $hugeFont;
     font-family: 'Deftone Stylus', Arial, sans-serif;
