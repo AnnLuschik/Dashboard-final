@@ -1872,6 +1872,8 @@ h5 {
   .right-sidebar__companies ul  {
     width: 200px;
   }
-}
 
-/*# sourceMappingURL=main.css.map */
+  .nav-header__icon div {
+    padding: 0 14px;
+  }
+}
