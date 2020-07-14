@@ -1,5 +1,9 @@
 @media screen and (max-width: 1226px) {
 
+    .wrapper {
+        flex-wrap: wrap;
+    }
+
     .nav-sidebar {
         flex-direction: row;
         flex: 1 0 100%;
@@ -113,9 +117,6 @@
 }
 
 @media screen and (max-width: 460px) {
-    main {
-      padding: 10px 0;
-    }
   
     .chart__holder {
       width: 200px;

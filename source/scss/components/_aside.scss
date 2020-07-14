@@ -17,13 +17,13 @@
     cursor: pointer;
 }
 .right-sidebar__btn--user {
-    background: url(../img/aside/users.png) no-repeat center;
+    background: url(../img/user.png) no-repeat center;
 }
 .right-sidebar__btn--chat {
-    background: url(../img/aside/chat.png) no-repeat center;
+    background: url(../img/chat.png) no-repeat center;
 }
 .right-sidebar__btn--like {
-    background: url(../img/aside/like.png) no-repeat center;
+    background: url(../img/like.png) no-repeat center;
 }
 .right-sidebar__btn:hover {
     background-color: #C54357; 
@@ -69,7 +69,7 @@
     height: 16px;
     background: $textColor;
     background-clip: content-box;
-    mask: url(../img/aside/chat.png);        
+    mask: url(../img/chat.png);        
 }
 .right-sidebar-person__main {
     padding: 0 0 0 16px;
@@ -105,7 +105,7 @@
     z-index: 500;
     width: 19px;
     height: 19px;
-    background: url(../../source/img/search.png) no-repeat center / contain;
+    background: url(../img/search.png) no-repeat center / contain;
 }
 .right-sidebar__search:after {
     content: '';
@@ -115,7 +115,7 @@
     z-index: 500;
     width: 19px;
     height: 19px;
-    background: url(../../source/img/aside/edit.png) no-repeat center / contain;
+    background: url(../img/edit.png) no-repeat center / contain;
 }
 .right-sidebar__companies {
     display: flex;

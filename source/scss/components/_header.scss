@@ -27,34 +27,34 @@ header {
         border-right: 1px solid $borderColor;
     }
     
-    &:last-of-type {
+    &:last-of-type:before {
         content: '';
         position: absolute;  
         top: 20px;
         right: 10px;
-        width: 6px;
-        height: 6px;
+        width: 5px;
+        height: 5px;
         border-radius: 50%;
         @include gradient;  
     }
 }
 .icon-folder {
-    mask: url(../img/header/folder.png) no-repeat center;
+    mask: url(../img/folder.png) no-repeat center;
 }
 .icon-settings {
-    mask: url(../img/header/header-settings.png) no-repeat center;  
+    mask: url(../img/header-settings.png) no-repeat center;  
 }
   
 .icon-upload {
-    mask: url(../img/header/upload.png) no-repeat center;  
+    mask: url(../img//upload.png) no-repeat center;  
 }
   
 .icon-letter {
-    mask: url(../img/header/mail.png) no-repeat center;
+    mask: url(../img/mail.png) no-repeat center;
 }
   
 .icon-earth {
-    mask: url(../img/header/planet-earth.png) no-repeat center;
+    mask: url(../img/planet-earth.png) no-repeat center;
 }
 .nav-header__rectangle {
     display: flex;

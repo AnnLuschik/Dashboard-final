@@ -50,10 +50,11 @@ main {
     justify-content: space-around;
     margin: 0 20px 35px 0;
     @include changes;
-}
-input[type="radio"] {
-    visibility: hidden;
-    display: none;
+
+    input[type="radio"] {
+        visibility: hidden;
+        display: none;
+    }
 }
 .check {
     display: flex;
@@ -190,7 +191,7 @@ input[type="radio"]:checked + label {
     width: 124px;
     height: 124px;
     margin: 0 39px 32px;
-    background: $borderShadowColor url(../img/main/circle-percentage.png) no-repeat center / cover;
+    background: $borderShadowColor url(../img/circle-percentage.png) no-repeat center / cover;
     border-radius: 50%;
 }
 .pie-chart span {
@@ -498,7 +499,7 @@ input[type="radio"]:checked + label {
     width: 187px;
     height: 115px;
     margin-bottom: 15px;
-    background: url(../img/main/map.png) no-repeat center / cover;
+    background: url(../img/map.png) no-repeat center / cover;
 }
 
 .shipment__marker {
@@ -509,7 +510,7 @@ input[type="radio"]:checked + label {
     height: 21px;
     @include gradient;
     background-clip: content-box;
-    mask: url(../img/main/placeholder.png);
+    mask: url(../img/placeholder.png);
 }
 .shipment__value {
     display: flex;

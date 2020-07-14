@@ -15,7 +15,7 @@
     display: none;
     width: 40px;
     height: 2px;
-    background: &sectionBcg;
+    background: $sectionBcg;
 
     &::before {
         content: '';
@@ -23,8 +23,8 @@
         top: -6px;
         left: 0;
         width: 40px;
-        height: 2.5px;
-        background: &sectionBcg;
+        height: 2px;
+        background: $sectionBcg;
     }
 
     &::after {
@@ -33,8 +33,8 @@
         top: 6px;
         left: 0;
         width: 40px;
-        height: 2.5px;
-        background: &sectionBcg;
+        height: 2px;
+        background: $sectionBcg;
     }
 }
 .nav-sidebar__logo {
@@ -60,6 +60,7 @@
         margin-bottom: 30px;
         padding-top: 30px;
         color: $sectionBcg;
+        cursor: pointer;
 
         &:last-child {
             margin-top: auto;
@@ -79,31 +80,55 @@
             font-weight: 400;
             font-size: $smallFont;
         }
+
+        label {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 30px;
+            margin-top: 8px;
+            cursor: pointer;
+        }
+
+        input {
+            visibility: hidden;
+            display: none;
+
+            &:checked ~ label:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: calc(100% + 17px);
+                border: 8px solid transparent;
+                border-left: 6px solid #FC725E;
+            }
+        }
     }
 } 
+
 #home {
-    background: url(../img/nav-aside/home.png) no-repeat center;
+    background: url(../img/home.png) no-repeat center;
 }
   
 #stactics {
-    background: url(../img/nav-aside/bar-chart.png) no-repeat center;
+    background: url(../img/bar-chart.png) no-repeat center;
 }
   
 #users {
-    background: url(../img/nav-aside/user.png) no-repeat center;
+    background: url(../img//user.png) no-repeat center;
 }
   
 #settings {
-    background: url(../img/nav-aside/settings.png) no-repeat center;
+    background: url(../img/settings.png) no-repeat center;
 }
   
 #quires {
-    background: url(../img/nav-aside/information.png) no-repeat center;
+    background: url(../img/information.png) no-repeat center;
 }
   
 #logout {
     align-self: flex-end;
     width: 30px;
     margin-bottom: 10px;
-    background: url(../img/nav-aside/power-button.png) no-repeat center;
+    background: url(../img/power-button.png) no-repeat center;
 }
